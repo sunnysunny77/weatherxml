@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+div,
+article {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: mediumslateblue;
+  margin-left: 11px;
+}
+
+p {
+  color: mintcream;
+  font-size: large;
+}
+
+header {
+  background-blend-mode: screen;
+  background-size: 100% 100%;
+  background-image: url(../images/ban.jpg);
+  height: 600px;
+}
+header h1 {
+  color: white;
+  padding: 50px;
+}
+
+header q {
+  color: white;
+  margin-left: 5%;
+  font-size: x-large;
+}
+
+nav {
+  background-color: #c4a4f2;
+  height: 75px;
+}
+
+li {
+  display: inline;
+  line-height: 75px;
+  color: lightslategray;
+  padding: 20px;
+}
+
+li a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+footer {
+  background-image: linear-gradient(to bottom, #c4a4f2, #dabfff 90%);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* main */
+
+.s {
+  position: sticky;
+  top: 0;
+  padding-top: 75px;
+}
+
+.bg1 {
+  background-color: #c4a4f2;
+}
+
+#side {
+  width: 25%;
+  float: right;
+  min-height: 3313px;
+  text-align: center;
+  padding: 0;
+}
+
+#side h2 {
+  text-align: left;
+}
+
+#side img {
+  padding: 116px 0;
+  width: 200px;
+}
+
+.media {
+  display: none;
+  padding: 0 5% 10% 5%;
+}
+
+#swrap {
+  height: 3313px;
+  width: 75%;
+  text-align: center;
+  padding: 0 0 75px 0;
+}
+
+#swrap p {
+  height: 472px;
+  line-height: 2;
+  padding: 40px 75px 0 75px;
+}
+
+#swrap p:last-of-type {
+  height: unset;
+}
+
+#sticky {
+  background-attachment: fixed;
+  background-blend-mode: screen;
+  background-size: 100% 100%;
+  background-image: url(../images/sticky.jpg);
+  height: 600px;
+}
+
+article {
+  background-color: #c4a4f2;
+  color: #fff;
+  min-height: 300px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+article h2 {
+  align-self: flex-start;
+}
+
+article p {
+  padding: 50px 50px;
+  align-self: baseline;
+}
+
+@media only screen and (max-width: 993px) {
+  header h1 {
+    padding: 5%;
+  }
+  header,
+  #sticky {
+    height: 275px;
+  }
+  h2 {
+    margin-left: 0;
+  }
+  #side {
+    float: none;
+    width: 100%;
+    padding: 5%;
+  }
+  #side img {
+    padding: 5% 0;
+  }
+  .media {
+    display: block;
+  }
+  #swrap {
+    display: none;
+  }
+  #sticky {
+    background-attachment: unset;
+  }
+  article {
+    padding: 5%;
+  }
+  article p {
+    padding: 5% 5%;
+  }
+}
