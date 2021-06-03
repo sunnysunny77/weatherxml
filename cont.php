@@ -15,6 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   $ftp = ftp_connect($url);
   ftp_login($ftp, $ftp_username, $ftp_userpass );
+  ftp_pasv($ftp, true) or die("Cannot switch to passive mode");
   if (ftp_fget($ftp, $fp, $server_file, FTP_BINARY, 0)) {
     if (ftp_fget($ftp, $fp0, $server_file0, FTP_BINARY, 0)) {
       $res = 1;

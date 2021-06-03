@@ -17,11 +17,11 @@ window.onload = function () {
             if (this.responseText == 1) {
                 let xmlFile0 = 'IDW60920.xml';
                 let xmlFile = 'IDW12300.xml';
-                xmlhttp.open("POST", xmlFile0, true);
+                xmlhttp.open("GET", xmlFile0, true);
                 xmlhttp.onload = function() {
                     if (xmlhttp.status == 200) {
                         xmlDoc0 = parser.parseFromString(this.response,"text/xml");
-                        xmlhttp.open("POST", xmlFile, true);
+                        xmlhttp.open("GET", xmlFile, true);
                         xmlhttp.onload = function() {
                             if (xmlhttp.status == 200) {
                                 xmlDoc = parser.parseFromString(this.response,"text/xml");
