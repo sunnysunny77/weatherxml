@@ -1,4 +1,6 @@
-/* css */
+@import "./variables.scss";
+/* css */;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +8,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: $font;
   max-width: 1920px;
 }
 
@@ -16,41 +18,41 @@ article {
 }
 
 h2 {
-  color: mediumslateblue;
+  color: $h2;
 }
 
 p {
-  color: mintcream;
+  color: $p;
   font-size: large;
 }
 
 header {
   background-blend-mode: screen;
   background-size: 100% 100%;
-  background-image: url(../images/ban.jpg);
+  background-image: $headerimg;
   height: 600px;
 }
 
 header h1 {
-  color: ghostwhite;
+  color: $headingtxt;
   padding: 50px;
 }
 
 header q {
-  color: ghostwhite;
+  color: $headingtxt;
   margin-left: 5%;
   font-size: x-large;
 }
 
 nav {
-  background-color: #c4a4f2;
+  background-color: $bg1;
   height: 75px;
 }
 
 li {
   display: inline;
   line-height: 75px;
-  color: lightslategray;
+  color: $li;
   padding: 20px;
 }
 
@@ -61,7 +63,7 @@ li a {
 }
 
 footer {
-  background-image: linear-gradient(to bottom, #c4a4f2, #dabfff 90%);
+  background-image: linear-gradient(to bottom, $bg1, $bg2 90%);
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -69,14 +71,15 @@ footer {
   align-items: center;
 }
 
-/* main */
+/* main */;
+
 .s {
   position: sticky;
   top: 0;
 }
 
 .bg1 {
-  background-color: #c4a4f2;
+  background-color: $bg1;
 }
 
 #flexb {
@@ -107,13 +110,13 @@ footer {
   background-attachment: fixed;
   background-blend-mode: screen;
   background-size: 100% 100%;
-  background-image: url(../images/sticky.jpg);
+  background-image: $stickyimg;
   height: 600px;
 }
 
 article {
-  background-color: #c4a4f2;
-  color: mintcream;
+  background-color: $bg1;
+  color: $p;
   min-height: 300px;
   position: relative;
   display: flex;
@@ -135,145 +138,114 @@ article p {
     width: 62.5%;
   }
 }
+
 @media only screen and (min-width: 993px) {
   #flexb img:last-of-type {
     padding: 136.5px 0;
   }
-
   #flexb p:last-of-type {
     align-self: baseline;
     height: unset;
   }
 }
+
 @media only screen and (max-width: 993px) {
   header h1 {
     padding: 5%;
   }
-
   header,
-#sticky {
+  #sticky {
     height: 275px;
   }
-
   #flexb {
     flex-direction: column;
     padding: 5%;
   }
-
   #flexb p:nth-child(19) {
     order: 21;
   }
-
   #flexb img:nth-child(21) {
     order: 20;
   }
-
   #flexb h2:nth-child(20) {
     order: 19;
   }
-
   #flexb p:nth-child(16) {
     order: 18;
   }
-
   #flexb img:nth-child(18) {
     order: 17;
   }
-
   #flexb h2:nth-child(17) {
     order: 16;
   }
-
   #flexb p:nth-child(13) {
     order: 15;
   }
-
   #flexb img:nth-child(15) {
     order: 14;
   }
-
   #flexb h2:nth-child(14) {
     order: 13;
   }
-
   #flexb p:nth-child(10) {
     order: 12;
   }
-
   #flexb img:nth-child(12) {
     order: 11;
   }
-
   #flexb h2:nth-child(11) {
     order: 10;
   }
-
   #flexb p:nth-child(7) {
     order: 9;
   }
-
   #flexb img:nth-child(9) {
     order: 8;
   }
-
   #flexb h2:nth-child(8) {
     order: 7;
   }
-
   #flexb p:nth-child(4) {
     order: 6;
   }
-
   #flexb img:nth-child(6) {
     order: 5;
   }
-
   #flexb h2:nth-child(5) {
     order: 4;
   }
-
   #flexb p:nth-child(1) {
     order: 3;
   }
-
   #flexb img:nth-child(3) {
     order: 2;
   }
-
   #flexb h2:nth-child(2) {
     order: 1;
   }
-
   #flexb img {
     padding: 50px 0;
   }
-
   #flexb p {
     width: 100%;
     padding: 5% 5% 20% 5%;
     height: unset;
   }
-
   #flexb p:last-of-type {
     padding: 5%;
   }
-
   .s {
     position: relative;
     top: unset;
   }
-
   #sticky {
     background-attachment: unset;
   }
-
   article {
     padding: 5%;
   }
-
   article p {
     padding: 5% 5%;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */

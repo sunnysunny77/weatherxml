@@ -1,0 +1,22 @@
+{
+  "name": "bom",
+  "version": "1.0.0",
+  "description": "Weather App",
+  "main": "./js/scripts.js",
+  "scripts": {
+    "build": "node ./node_modules/sass/sass.js ./css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunnysunny77/bom.git"
+  },
+  "author": "D.C",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunnysunny77/bom/issues"
+  },
+  "homepage": "https://github.com/sunnysunny77/bom#readme",
+  "dependencies": {
+    "sass": "^1.34.0"
+  }
+}
