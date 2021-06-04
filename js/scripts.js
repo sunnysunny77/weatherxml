@@ -1,12 +1,11 @@
 
 window.onload = function () {
-
     let parser = new DOMParser();
-    let xmlDoc;
     let xmlDoc0;
-    var xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("POST", "cont.php", true);
-        xmlhttp.onload = function() {
+    let xmlDoc;
+    let xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("POST", "cont.php", true);
+    xmlhttp.onload = function() {
         if (xmlhttp.status == 200) {
             let xmlFile0 = 'IDW60920.xml';
             let xmlFile = 'IDW12300.xml';
@@ -70,11 +69,11 @@ window.onload = function () {
                         }                   
                     }
                     xmlhttp.send();
-                    } else {
-                        console.log(this.status)
-                    }                   
-                }
-                xmlhttp.send();
+                } else {
+                    console.log(this.status)
+                }                   
+            }
+            xmlhttp.send();
         } else {
             console.log(this.responseText)
         }
