@@ -17,9 +17,7 @@ article {
 }
 
 h2 {
-  margin-bottom: 10px;
   color: mediumslateblue;
-  margin-left: 11px;
 }
 
 p {
@@ -157,9 +155,6 @@ article p {
   header,
   #sticky {
     height: 275px;
-  }
-  h2 {
-    margin-left: 0;
   }
   #flexb {
     flex-direction: column-reverse;
