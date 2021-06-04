@@ -109,9 +109,9 @@ footer {
 #sticky {
   background-attachment: fixed;
   background-blend-mode: screen;
-  background-size: 100% 100%;
+  background-size: 100%;
   background-image: $stickyimg;
-  height: 600px;
+  padding: 18% 12%;
 }
 
 article {
@@ -154,8 +154,7 @@ article p {
   header h1 {
     padding: 5%;
   }
-  header,
-  #sticky {
+  header {
     height: 275px;
   }
   #flexb {
@@ -242,6 +241,7 @@ article p {
   }
   #sticky {
     background-attachment: unset;
+    background-size: 100% 100%;
   }
   article {
     padding: 5%;
