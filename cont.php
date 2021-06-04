@@ -18,12 +18,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   ftp_pasv($ftp, true) or die("Cannot switch to passive mode");
   if (ftp_fget($ftp, $fp, $server_file, FTP_BINARY, 0)) {
     if (ftp_fget($ftp, $fp0, $server_file0, FTP_BINARY, 0)) {
-      $res = 1;
+      $res = var_dump(http_response_code(200));
     } else {
       $res = print_r(error_get_last()['message']);
+      http_response_code(500);
     }
   } else {
     $res = print_r(error_get_last()['message']);
+    http_response_code(500);
   }
   ftp_close($ftp);
   fclose($fp);
