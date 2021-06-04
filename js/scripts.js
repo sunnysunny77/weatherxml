@@ -17,16 +17,16 @@ window.onload = function () {
                     xmlhttp.onload = function() {
                         if (xmlhttp.status == 200) {
                             xmlDoc = parser.parseFromString(this.response,"text/xml");
+                            let u = xmlDoc0.getElementsByTagName("product")[0].getElementsByTagName("observations")[0].getElementsByTagName("station")[0].getElementsByTagName("period")[0].getElementsByTagName("level")[0].getElementsByTagName("element");
                             for (let x = 0; x <= 6; x++){
-                                let txt = "<br>";
                                 let t = xmlDoc.getElementsByTagName("product")[0].getElementsByTagName("forecast")[0].getElementsByTagName("area")[2].getElementsByTagName("forecast-period")[x];
                                 let y = t.getElementsByTagName("element");
                                 let o = t.getElementsByTagName("text");
-                                let txt0 = "<br>"
-                                let u = xmlDoc0.getElementsByTagName("product")[0].getElementsByTagName("observations")[0].getElementsByTagName("station")[0].getElementsByTagName("period")[0].getElementsByTagName("level")[0].getElementsByTagName("element");
-                                let date = new Date(t.getAttribute('start-time-local'))
+                                let date = new Date(t.getAttribute('start-time-local'));
+                                date = date.toLocaleDateString();
                                 let p = xmlDoc.getElementsByTagName("product")[0].getElementsByTagName("forecast")[0].getElementsByTagName("area")[1].getElementsByTagName("forecast-period")[x].getElementsByTagName("text")[0];
-                                date.toLocaleDateString()
+                                let txt0 = "<br>";
+                                let txt = "<br>";
                                 for (i = 0; i < y.length; i++) {
                                     if (y[i].getAttribute('type') === "forecast_icon_code") { 
                                         document.getElementsByClassName("x")[x].src = "./images/" + y[i].childNodes[0].nodeValue  + ".png";
@@ -55,10 +55,10 @@ window.onload = function () {
                                     }
                                 }
                                 if (x < 1) {
-                                    document.getElementsByClassName("f")[x].innerHTML = date.toLocaleDateString()
+                                    document.getElementsByClassName("f")[x].innerHTML = date;
                                     document.getElementsByClassName("z")[x].innerHTML = p.childNodes[0].nodeValue + txt0;
                                 } else if (x >= 1) {
-                                    document.getElementsByClassName("f")[x].innerHTML = date.toLocaleDateString()
+                                    document.getElementsByClassName("f")[x].innerHTML = date;
                                     document.getElementsByClassName("z")[x].innerHTML = p.childNodes[0].nodeValue + txt;
                                 }
                             }
