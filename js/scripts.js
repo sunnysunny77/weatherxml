@@ -57,11 +57,9 @@ window.onload = function () {
                                 if (x < 1) {
                                     document.getElementsByClassName("f")[x].innerHTML = date.toLocaleDateString()
                                     document.getElementsByClassName("z")[x].innerHTML = p.childNodes[0].nodeValue + txt0;
-                                    document.getElementsByClassName("y")[x].innerHTML = p.childNodes[0].nodeValue + txt0;
                                 } else if (x >= 1) {
                                     document.getElementsByClassName("f")[x].innerHTML = date.toLocaleDateString()
                                     document.getElementsByClassName("z")[x].innerHTML = p.childNodes[0].nodeValue + txt;
-                                    document.getElementsByClassName("y")[x].innerHTML = p.childNodes[0].nodeValue + txt;
                                 }
                             }
                         } else {

@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* css */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +11,7 @@ body {
   font-family: sans-serif;
 }
 
-div,
+section,
 article {
   padding: 20px;
 }
@@ -32,6 +33,7 @@ header {
   background-image: url(../images/ban.jpg);
   height: 600px;
 }
+
 header h1 {
   color: white;
   padding: 50px;
@@ -75,50 +77,34 @@ footer {
 .s {
   position: sticky;
   top: 0;
-  padding-top: 75px;
 }
 
 .bg1 {
   background-color: #c4a4f2;
 }
 
-#side {
-  width: 25%;
-  float: right;
-  min-height: 3318px;
-  text-align: center;
-  padding: 0;
+#flexb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 20px 75px 20px;
+  align-items: center;
 }
 
-#side h2 {
-  text-align: left;
+#flexb h2 {
+  align-self: flex-start;
 }
 
-#side img {
-  padding: 116px 0;
+#flexb img {
   width: 200px;
+  align-self: center;
 }
 
-.media {
-  display: none;
-  padding: 0 5% 10% 5%;
-}
-
-#swrap {
-  height: 3318px;
-  width: 75%;
-  text-align: center;
-  padding: 0 0 75px 0;
-}
-
-#swrap p {
+#flexb p {
   height: 472px;
   line-height: 2;
   padding: 40px 75px 0 75px;
-}
-
-#swrap p:last-of-type {
-  height: unset;
+  width: 75%;
+  text-align: center;
 }
 
 #sticky {
@@ -148,6 +134,22 @@ article p {
   align-self: baseline;
 }
 
+@media only screen and (max-width: 1380px) {
+  #flexb p {
+    width: 62.5%;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  #flexb img:last-of-type {
+    padding: 136.5px 0;
+  }
+  #flexb p:last-of-type {
+    align-self: baseline;
+    height: unset;
+  }
+}
+
 @media only screen and (max-width: 993px) {
   header h1 {
     padding: 5%;
@@ -159,19 +161,87 @@ article p {
   h2 {
     margin-left: 0;
   }
-  #side {
-    float: none;
-    width: 100%;
+  #flexb {
+    flex-direction: column-reverse;
     padding: 5%;
   }
-  #side img {
-    padding: 5% 0;
+  #flexb p:nth-child(19) {
+    order: 1;
   }
-  .media {
-    display: block;
+  #flexb img:nth-child(21) {
+    order: 2;
   }
-  #swrap {
-    display: none;
+  #flexb h2:nth-child(20) {
+    order: 3;
+  } 
+  #flexb p:nth-child(16) {
+    order: 4;
+  }
+  #flexb img:nth-child(18) {
+    order: 5;
+  }
+  #flexb h2:nth-child(17) {
+    order: 6;
+  } 
+  #flexb p:nth-child(13) {
+    order: 7;
+  }
+  #flexb img:nth-child(15) {
+    order: 8;
+  }
+  #flexb h2:nth-child(14) {
+    order: 9;
+  } 
+  #flexb p:nth-child(10) {
+    order: 10;
+  }
+  #flexb img:nth-child(12) {
+    order: 11;
+  }
+  #flexb h2:nth-child(11) {
+    order: 12;
+  } 
+  #flexb p:nth-child(7) {
+    order: 13;
+  }
+  #flexb img:nth-child(9) {
+    order: 14;
+  }
+  #flexb h2:nth-child(8) {
+    order: 15;
+  }
+  #flexb p:nth-child(4) {
+    order: 16;
+  }
+  #flexb img:nth-child(6) {
+    order: 17;
+  }
+  #flexb h2:nth-child(5) {
+    order: 18;
+  }
+  #flexb p:nth-child(1) {
+    order: 19;
+  }
+  #flexb img:nth-child(3) {
+    order: 20;
+  }
+  #flexb h2:nth-child(2) {
+    order: 21;
+  }
+  #flexb img {
+    padding: 50px 0;
+  }
+  #flexb p {
+    width: 100%;
+    padding: 5% 5% 20% 5%;
+    height: unset;
+  }
+  #flexb p:last-of-type {
+    padding: 5%;
+  }
+  .s {
+    position: relative;
+    top: unset;
   }
   #sticky {
     background-attachment: unset;
