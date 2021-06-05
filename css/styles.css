@@ -133,13 +133,13 @@ article p {
 
 @media only screen and (min-width: 993px) {
   #flexb img:last-of-type {
-    padding: 136.5px 0;
+    padding: 136px 0;
   }
 
   #flexb p:last-of-type {
     align-self: baseline;
     height: unset;
-    min-height: 236.5px;
+    min-height: 236px;
   }
 }
 @media only screen and (max-width: 993px) {
