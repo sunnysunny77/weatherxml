@@ -95,7 +95,7 @@ footer {
 }
 
 #flexb img {
-  width: $iconheight;
+  width: $stickypheight / 2.25;
   align-self: center;
 }
 
@@ -136,7 +136,7 @@ article p {
 
 @media only screen and (min-width: 993px) {
   #flexb img:last-of-type {
-    padding: $stickypheight / 2 - $iconheight / 2 0;
+    margin: $stickypheight / 4.5 0;
   }
   #flexb p:last-of-type {
     align-self: baseline;
@@ -220,7 +220,7 @@ article p {
     order: 1;
   }
   #flexb img {
-    padding: $paddingmobile 0;
+    margin: $paddingmobile 0;
   }
   #flexb p {
     width: 100%;

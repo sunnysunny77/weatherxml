@@ -21,7 +21,7 @@ h2 {
 
 p {
   color: mintcream;
-  font-size: larger;
+  font-size: large;
 }
 
 header {
@@ -39,7 +39,7 @@ header h1 {
 header q {
   color: ghostwhite;
   margin-left: 5%;
-  font-size: larger;
+  font-size: large;
 }
 
 nav {
@@ -92,7 +92,7 @@ footer {
 }
 
 #flexb img {
-  width: 200px;
+  width: 209.7777777778px;
   align-self: center;
 }
 
@@ -133,7 +133,7 @@ article p {
 
 @media only screen and (min-width: 993px) {
   #flexb img:last-of-type {
-    padding: 136px 0;
+    margin: 104.8888888889px 0;
   }
 
   #flexb p:last-of-type {
@@ -240,7 +240,7 @@ article p {
   }
 
   #flexb img {
-    padding: 5% 0;
+    margin: 5% 0;
   }
 
   #flexb p {
