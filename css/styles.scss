@@ -23,14 +23,14 @@ h2 {
 
 p {
   color: $p;
-  font-size: large;
+  font-size: $fontsize;
 }
 
 header {
   background-blend-mode: screen;
   background-size: 100% 100%;
   background-image: $headerimg;
-  height: 600px;
+  padding: $headerBgAspect
 }
 
 header h1 {
@@ -41,7 +41,7 @@ header h1 {
 header q {
   color: $headingtxt;
   margin-left: 5%;
-  font-size: x-large;
+  font-size: $fontsize;
 }
 
 nav {
@@ -109,10 +109,10 @@ footer {
 
 #sticky {
   background-attachment: fixed;
-  background-blend-mode: screen;
+  background-blend-mode: $stickyblend;
   background-size: 100% 100%;
   background-image: $stickyimg;
-  padding: 19.2% 10.8%;
+  padding: $imageBgAspect;
 }
 
 article {
@@ -147,14 +147,11 @@ article p {
 
 @media only screen and (max-width: 993px) {
   header h1 {
-    padding: 5%;
-  }
-  header {
-    height: 275px;
+    padding: $paddingmobile;
   }
   #flexb {
     flex-direction: column;
-    padding: 5%;
+    padding: $paddingmobile;
     justify-content: unset;
     flex-wrap: unset;
     align-items: unset;
@@ -223,15 +220,15 @@ article p {
     order: 1;
   }
   #flexb img {
-    padding: 50px 0;
+    padding: $paddingmobile 0;
   }
   #flexb p {
     width: 100%;
-    padding: 5% 5% 20% 5%;
+    padding: $paddingmobile $paddingmobile $paddingmobile * 4 $paddingmobile;
     height: unset;
   }
   #flexb p:last-of-type {
-    padding: 5%;
+    padding: $paddingmobile;
   }
   .s {
     position: relative;
@@ -241,9 +238,9 @@ article p {
     background-attachment: unset;
   }
   article {
-    padding: 5%;
+    padding: $paddingmobile;
   }
   article p {
-    padding: 5% 5%;
+    padding: $paddingmobile $paddingmobile;
   }
 }

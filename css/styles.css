@@ -21,14 +21,14 @@ h2 {
 
 p {
   color: mintcream;
-  font-size: large;
+  font-size: larger;
 }
 
 header {
   background-blend-mode: screen;
   background-size: 100% 100%;
   background-image: url(../images/ban.jpg);
-  height: 600px;
+  padding: 0 6% 18% 6%;
 }
 
 header h1 {
@@ -39,7 +39,7 @@ header h1 {
 header q {
   color: ghostwhite;
   margin-left: 5%;
-  font-size: x-large;
+  font-size: larger;
 }
 
 nav {
@@ -147,10 +147,6 @@ article p {
     padding: 5%;
   }
 
-  header {
-    height: 275px;
-  }
-
   #flexb {
     flex-direction: column;
     padding: 5%;
@@ -244,7 +240,7 @@ article p {
   }
 
   #flexb img {
-    padding: 50px 0;
+    padding: 5% 0;
   }
 
   #flexb p {

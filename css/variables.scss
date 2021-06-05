@@ -1,12 +1,21 @@
 $font: sans-serif;
+$fontsize: larger;
+
 $headingtxt: ghostwhite;
 $h2: mediumslateblue;
 $p: mintcream;
 $li: lightslategray;
 
-
 $bg1:#c4a4f2;
 $bg2:#dabfff;
 
 $headerimg: url(../images/ban.jpg);
+$headerBgAspect: 0 6% 18% 6%;
+
 $stickyimg: url(../images/sticky.jpg);
+$stickyblend: screen;
+$imageBgAspect: 19.2% 10.8%;
+
+
+$paddingmobile: 5%;
+
