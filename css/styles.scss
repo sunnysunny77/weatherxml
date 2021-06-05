@@ -85,7 +85,7 @@ footer {
 #flexb {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px 20px 75px 20px;
+  padding: 0;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -97,14 +97,14 @@ footer {
 #flexb img {
   width: $stickypheight / 2;
   align-self: center;
-  padding: 25px;
+  padding: $iconpading;
 }
 
 #flexb p {
   height: $stickypheight;
   line-height: 2;
-  padding: 40px 5% 0 0;
-  width: 62.5%;
+  padding: $stickyppadding;
+  width: $stickypwidth;
   text-align: center;
 }
 
