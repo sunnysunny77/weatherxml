@@ -99,7 +99,7 @@ footer {
 #flexb p {
   height: 472px;
   line-height: 2;
-  padding: 40px 5% 0 5%;
+  padding: 40px 5% 0 0;
   width: 62.5%;
   text-align: center;
 }
