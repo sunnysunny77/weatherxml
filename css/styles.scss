@@ -95,8 +95,9 @@ footer {
 }
 
 #flexb img {
-  width: $stickypheight / 2.25;
+  width: $stickypheight / 2;
   align-self: center;
+  padding: 25px;
 }
 
 #flexb p {
@@ -136,7 +137,7 @@ article p {
 
 @media only screen and (min-width: 993px) {
   #flexb img:last-of-type {
-    margin: $stickypheight / 4.5 0;
+    margin: $stickypheight / 4 0;
   }
   #flexb p:last-of-type {
     align-self: baseline;

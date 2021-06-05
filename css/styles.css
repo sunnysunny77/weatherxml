@@ -92,12 +92,13 @@ footer {
 }
 
 #flexb img {
-  width: 209.7777777778px;
+  width: 250px;
   align-self: center;
+  padding: 25px;
 }
 
 #flexb p {
-  height: 472px;
+  height: 500px;
   line-height: 2;
   padding: 40px 5% 0 0;
   width: 62.5%;
@@ -133,13 +134,13 @@ article p {
 
 @media only screen and (min-width: 993px) {
   #flexb img:last-of-type {
-    margin: 104.8888888889px 0;
+    margin: 125px 0;
   }
 
   #flexb p:last-of-type {
     align-self: baseline;
     height: unset;
-    min-height: 236px;
+    min-height: 250px;
   }
 }
 @media only screen and (max-width: 993px) {
