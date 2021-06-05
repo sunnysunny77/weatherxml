@@ -156,6 +156,8 @@ article p {
     flex-direction: column;
     padding: 5%;
     justify-content: unset;
+    flex-wrap: unset;
+    align-items: unset;
   }
   #flexb p:nth-child(19) {
     order: 21;
