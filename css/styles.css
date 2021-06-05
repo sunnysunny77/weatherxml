@@ -84,6 +84,7 @@ footer {
   flex-wrap: wrap;
   padding: 20px 20px 75px 20px;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 #flexb h2 {
@@ -98,17 +99,17 @@ footer {
 #flexb p {
   height: 472px;
   line-height: 2;
-  padding: 40px 75px 0 75px;
-  width: 75%;
+  padding: 40px 5% 0 5%;
+  width: 62.5%;
   text-align: center;
 }
 
 #sticky {
   background-attachment: fixed;
   background-blend-mode: screen;
-  background-size: 100%;
+  background-size: 100% 100%;
   background-image: url(../images/sticky.jpg);
-  padding: 16% 9%;
+  padding: 19.2% 10.8%;
 }
 
 article {
@@ -130,11 +131,6 @@ article p {
   align-self: baseline;
 }
 
-@media only screen and (max-width: 1380px) {
-  #flexb p {
-    width: 62.5%;
-  }
-}
 @media only screen and (min-width: 993px) {
   #flexb img:last-of-type {
     padding: 136.5px 0;
@@ -158,6 +154,7 @@ article p {
   #flexb {
     flex-direction: column;
     padding: 5%;
+    justify-content: unset;
   }
 
   #flexb p:nth-child(19) {
@@ -265,7 +262,6 @@ article p {
 
   #sticky {
     background-attachment: unset;
-    background-size: 100% 100%;
   }
 
   article {
