@@ -107,6 +107,7 @@ footer {
 
 #sticky {
   background-attachment: fixed;
+  background-color: #bf134999;
   background-blend-mode: screen;
   background-size: 100% 100%;
   background-image: url(../images/sticky.jpg);
@@ -261,6 +262,7 @@ article p {
 
   #sticky {
     background-attachment: unset;
+    background-size: cover;
   }
 
   article {
