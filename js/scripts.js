@@ -29,15 +29,17 @@ window.onload = function () {
                                         if (u[i].getElementsByTagName("period")[0].getElementsByTagName("level")[0].getElementsByTagName("element")) {
                                             let q = u[i].getElementsByTagName("period")[0].getElementsByTagName("level")[0].getElementsByTagName("element");
                                             for (l = 0; l < q.length; l++) {
-                                                if (q[l].getAttribute('type') === "minimum_air_temperature") {
-                                                    txtc += "Current Minimum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C";
+                                                if (q[l].getAttribute('type') === "air_temperature") {
+                                                    txtc += "<br>Current&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C";
                                                 }
                                                 if (q[l].getAttribute('type') === "maximum_air_temperature") {
-                                                    txtc += "Currrent Maximum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
+                                                    txtc += "<br>Currrent Maximum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C";
                                                 }
-                                                if (q[l].getAttribute('type') === "air_temperature") {
-                                                    txtc += "Current&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
+                                                if (q[l].getAttribute('type') === "minimum_air_temperature") {
+                                                    txtc += "<br>Current Minimum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C";
                                                 }
+                                               
+                                              
                                             }
                                         }
                                     }
@@ -59,14 +61,14 @@ window.onload = function () {
                                             let q = r.getElementsByTagName("element");
                                             let c = r.getElementsByTagName("text");
                                             for (l = 0; l < q.length; l++) {
-                                                if (q[l].getAttribute('type') === "forecast_icon_code") { 
-                                                    document.getElementsByClassName("x")[x].src = "./images/" + q[l].childNodes[0].nodeValue  + ".png";
-                                                }
                                                 if (q[l].getAttribute('type') === "air_temperature_minimum") {
-                                                    txt1 += "Minimum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
+                                                    txt1 += "<br>Minimum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C";
                                                 }
                                                 if (q[l].getAttribute('type') === "air_temperature_maximum") {
-                                                    txt1 += "Maximum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C";
+                                                    txt1 += "<br>Maximum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C";
+                                                }
+                                                if (q[l].getAttribute('type') === "forecast_icon_code") { 
+                                                    document.getElementsByClassName("x")[x].src = "./images/" + q[l].childNodes[0].nodeValue  + ".png";
                                                 }  
                                             }
                                             for (l = 0; l < c.length; l++) {
@@ -79,10 +81,10 @@ window.onload = function () {
                                 }
                                 if (x < 1) {
                                     document.getElementsByClassName("f")[x].innerHTML = date;
-                                    document.getElementsByClassName("z")[x].innerHTML = txt0 + "<br>" + txt1 + "<br>" + txtc;
+                                    document.getElementsByClassName("z")[x].innerHTML = txt0  + txt1 + txtc;
                                 } else if (x >= 1) {
                                     document.getElementsByClassName("f")[x].innerHTML = date;
-                                    document.getElementsByClassName("z")[x].innerHTML = txt0 + "<br>" + txt1;
+                                    document.getElementsByClassName("z")[x].innerHTML = txt0  + txt1;
                                 }
                             }
                         } else {
