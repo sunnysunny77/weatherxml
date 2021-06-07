@@ -38,8 +38,6 @@ window.onload = function () {
                                                 if (q[l].getAttribute('type') === "minimum_air_temperature") {
                                                     txtc += "<br>Current Minimum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C";
                                                 }
-                                               
-                                              
                                             }
                                         }
                                     }
