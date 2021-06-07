@@ -17,13 +17,31 @@ window.onload = function () {
                     xmlhttp.onload = function() {
                         if (xmlhttp.status == 200) {
                             xmlDoc = parser.parseFromString(this.response,"text/xml");
-                            const t = xmlDoc.getElementsByTagName("product")[0].getElementsByTagName("forecast")[0].getElementsByTagName("area");
                             const u = xmlDoc0.getElementsByTagName("product")[0].getElementsByTagName("observations")[0].getElementsByTagName("station");
+                            const t = xmlDoc.getElementsByTagName("product")[0].getElementsByTagName("forecast")[0].getElementsByTagName("area");
                             for (let x = 0; x <= 6; x++){
-                                let txt = "";
-                                let txt0 = "<br>";
+                                let txtc = "";
+                                let txt0 = "";
                                 let txt1 = "";
                                 let date;
+                                for (i = 0; i < u.length; i++) {
+                                    if (u[i].getAttribute('stn-name') === "PERTH METRO") {
+                                        if (u[i].getElementsByTagName("period")[0].getElementsByTagName("level")[0].getElementsByTagName("element")) {
+                                            let q = u[i].getElementsByTagName("period")[0].getElementsByTagName("level")[0].getElementsByTagName("element");
+                                            for (l = 0; l < q.length; l++) {
+                                                if (q[l].getAttribute('type') === "minimum_air_temperature") {
+                                                    txtc += "Current Minimum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C";
+                                                }
+                                                if (q[l].getAttribute('type') === "maximum_air_temperature") {
+                                                    txtc += "Currrent Maximum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
+                                                }
+                                                if (q[l].getAttribute('type') === "air_temperature") {
+                                                    txtc += "Current&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                                 for (i = 0; i < t.length; i++) {
                                     if (t[i].getElementsByTagName("forecast-period")[x]) {
                                         let r = t[i].getElementsByTagName("forecast-period")[x];
@@ -33,7 +51,7 @@ window.onload = function () {
                                             date = date.toLocaleDateString();
                                             for (l = 0; l < q.length; l++) {
                                                 if (q[l].getAttribute('type') === "forecast") {
-                                                    txt += q[l].childNodes[0].nodeValue
+                                                    txt0 += q[l].childNodes[0].nodeValue;
                                                 }
                                             }
                                         }
@@ -45,10 +63,10 @@ window.onload = function () {
                                                     document.getElementsByClassName("x")[x].src = "./images/" + q[l].childNodes[0].nodeValue  + ".png";
                                                 }
                                                 if (q[l].getAttribute('type') === "air_temperature_minimum") {
-                                                    txt0 += "Minimum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
+                                                    txt1 += "Minimum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
                                                 }
                                                 if (q[l].getAttribute('type') === "air_temperature_maximum") {
-                                                    txt0 += "Maximum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
+                                                    txt1 += "Maximum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C";
                                                 }  
                                             }
                                             for (l = 0; l < c.length; l++) {
@@ -59,30 +77,12 @@ window.onload = function () {
                                         }              
                                     }
                                 }
-                                for (i = 0; i < u.length; i++) {
-                                    if (u[i].getAttribute('stn-name') === "PERTH METRO") {
-                                        if (u[i].getElementsByTagName("period")[0].getElementsByTagName("level")[0].getElementsByTagName("element")) {
-                                            let q = u[i].getElementsByTagName("period")[0].getElementsByTagName("level")[0].getElementsByTagName("element");
-                                            for (l = 0; l < q.length; l++) {
-                                                if (q[l].getAttribute('type') === "minimum_air_temperature") {
-                                                    txt1 += "Current Minimum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
-                                                }
-                                                if (q[l].getAttribute('type') === "maximum_air_temperature") {
-                                                    txt1 += "Currrent Maximum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
-                                                }
-                                                if (q[l].getAttribute('type') === "air_temperature") {
-                                                    txt1 += "Current&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
                                 if (x < 1) {
                                     document.getElementsByClassName("f")[x].innerHTML = date;
-                                    document.getElementsByClassName("z")[x].innerHTML = txt + txt0 + txt1;
+                                    document.getElementsByClassName("z")[x].innerHTML = txt0 + "<br>" + txt1 + "<br>" + txtc;
                                 } else if (x >= 1) {
                                     document.getElementsByClassName("f")[x].innerHTML = date;
-                                    document.getElementsByClassName("z")[x].innerHTML = txt + txt0;
+                                    document.getElementsByClassName("z")[x].innerHTML = txt0 + "<br>" + txt1;
                                 }
                             }
                         } else {
