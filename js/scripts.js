@@ -49,15 +49,14 @@ window.onload = function () {
                                                 }
                                                 if (q[l].getAttribute('type') === "air_temperature_maximum") {
                                                     txt0 += "Maximum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
-                                                    }
-                                                }
-                                                for (l = 0; l < c.length; l++) {
-                                                    if (c[l].getAttribute('type') === "precis") {
-                                                    document.getElementsByClassName("x")[x].alt = c[l].childNodes[0].nodeValue; 
-                                                 }
+                                                }  
                                             }
-                                        }
-                                        
+                                            for (l = 0; l < c.length; l++) {
+                                                if (c[l].getAttribute('type') === "precis") {
+                                                    document.getElementsByClassName("x")[x].alt = c[l].childNodes[0].nodeValue;
+                                                } 
+                                             }
+                                        }              
                                     }
                                 }
                                 for (i = 0; i < u.length; i++) {
