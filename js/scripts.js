@@ -62,16 +62,18 @@ window.onload = function () {
                                 }
                                 for (i = 0; i < u.length; i++) {
                                     if (u[i].getAttribute('stn-name') === "PERTH METRO") {
-                                        let q = u[i].getElementsByTagName("period")[0].getElementsByTagName("level")[0].getElementsByTagName("element");
-                                        for (l = 0; l < q.length; l++) {
-                                            if (q[l].getAttribute('type') === "minimum_air_temperature") {
-                                                txt1 += "Current Minimum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
-                                            }
-                                            if (q[l].getAttribute('type') === "maximum_air_temperature") {
-                                                txt1 += "Currrent Maximum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
-                                            }
-                                            if (q[l].getAttribute('type') === "air_temperature") {
-                                                txt1 += "Current&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
+                                        if (u[i].getElementsByTagName("period")[0].getElementsByTagName("level")[0].getElementsByTagName("element")) {
+                                            let q = u[i].getElementsByTagName("period")[0].getElementsByTagName("level")[0].getElementsByTagName("element");
+                                            for (l = 0; l < q.length; l++) {
+                                                if (q[l].getAttribute('type') === "minimum_air_temperature") {
+                                                    txt1 += "Current Minimum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
+                                                }
+                                                if (q[l].getAttribute('type') === "maximum_air_temperature") {
+                                                    txt1 += "Currrent Maximum&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
+                                                }
+                                                if (q[l].getAttribute('type') === "air_temperature") {
+                                                    txt1 += "Current&nbsp;" + q[l].childNodes[0].nodeValue + "&nbsp;°C<br>";
+                                                }
                                             }
                                         }
                                     }
