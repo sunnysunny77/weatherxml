@@ -20,7 +20,7 @@ h2 {
 }
 
 p {
-  color: aliceblue;
+  color: white;
   font-size: large;
 }
 
@@ -61,7 +61,7 @@ li a {
 }
 
 footer {
-  background-image: linear-gradient(to bottom, #6e46dd, #7B25CB 90%);
+  background-image: linear-gradient(to bottom, #6e46dd, #9071e5 90%);
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -116,7 +116,7 @@ footer {
 
 article {
   background-color: #6e46dd;
-  color: aliceblue;
+  color: white;
   min-height: 300px;
   position: relative;
   display: flex;
