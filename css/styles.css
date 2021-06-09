@@ -32,12 +32,12 @@ header {
 }
 
 header h1 {
-  color: #bf134999;
+  color: #bf1349;
   padding: 50px;
 }
 
 header q {
-  color: #bf134999;
+  color: #bf1349;
   margin-left: 5%;
   font-size: large;
 }
@@ -107,7 +107,7 @@ footer {
 
 #sticky {
   background-attachment: fixed;
-  background-color: #bf134999;
+  background-color: #610a26;
   background-blend-mode: screen;
   background-size: 100% 100%;
   background-image: url(../images/sticky.jpg);
