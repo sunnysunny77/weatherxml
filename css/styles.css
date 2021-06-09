@@ -16,11 +16,11 @@ article {
 }
 
 h2 {
-  color: mediumslateblue;
+  color: #f9c0c3;
 }
 
 p {
-  color: mintcream;
+  color: aliceblue;
   font-size: large;
 }
 
@@ -32,25 +32,25 @@ header {
 }
 
 header h1 {
-  color: ghostwhite;
+  color: #bf134999;
   padding: 50px;
 }
 
 header q {
-  color: ghostwhite;
+  color: #bf134999;
   margin-left: 5%;
   font-size: large;
 }
 
 nav {
-  background-color: #c4a4f2;
+  background-color: #6e46dd;
   height: 75px;
 }
 
 li {
   display: inline;
   line-height: 75px;
-  color: lightslategray;
+  color: mintcream;
   padding: 20px;
 }
 
@@ -61,7 +61,7 @@ li a {
 }
 
 footer {
-  background-image: linear-gradient(to bottom, #c4a4f2, #dabfff 90%);
+  background-image: linear-gradient(to bottom, #6e46dd, #7B25CB 90%);
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -76,7 +76,7 @@ footer {
 }
 
 .bg1 {
-  background-color: #c4a4f2;
+  background-color: #6e46dd;
 }
 
 #flexb {
@@ -115,8 +115,8 @@ footer {
 }
 
 article {
-  background-color: #c4a4f2;
-  color: mintcream;
+  background-color: #6e46dd;
+  color: aliceblue;
   min-height: 300px;
   position: relative;
   display: flex;
