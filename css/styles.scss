@@ -112,7 +112,8 @@ footer {
   background-attachment: fixed;
   background-color: $stickyblendcolor;
   background-blend-mode: $stickyblend;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
   background-image: $stickyimg;
   padding: $imageBgAspect;
 }
@@ -235,10 +236,6 @@ article p {
   .s {
     position: relative;
     top: unset;
-  }
-  #sticky {
-    background-attachment: unset;
-    background-size: cover;
   }
   article {
     padding: $paddingmobile;

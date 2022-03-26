@@ -109,7 +109,8 @@ footer {
   background-attachment: fixed;
   background-color: #610a26;
   background-blend-mode: screen;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
   background-image: url(../images/sticky.jpg);
   padding: 19.2% 10.8%;
 }
@@ -258,11 +259,6 @@ article p {
   .s {
     position: relative;
     top: unset;
-  }
-
-  #sticky {
-    background-attachment: unset;
-    background-size: cover;
   }
 
   article {
