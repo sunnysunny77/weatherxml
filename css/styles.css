@@ -8,6 +8,7 @@
 body {
   font-family: sans-serif;
   max-width: 1920px;
+  margin: auto;
 }
 
 section,
@@ -138,7 +139,6 @@ article p {
   #flexb img:last-of-type {
     margin: 125px 0;
   }
-
   #flexb p:last-of-type {
     align-self: baseline;
     height: unset;
@@ -149,7 +149,6 @@ article p {
   header h1 {
     padding: 5%;
   }
-
   #flexb {
     flex-direction: column;
     padding: 5%;
@@ -157,114 +156,87 @@ article p {
     flex-wrap: unset;
     align-items: unset;
   }
-
   #flexb p:nth-child(19) {
     order: 21;
   }
-
   #flexb img:nth-child(21) {
     order: 20;
   }
-
   #flexb h2:nth-child(20) {
     order: 19;
   }
-
   #flexb p:nth-child(16) {
     order: 18;
   }
-
   #flexb img:nth-child(18) {
     order: 17;
   }
-
   #flexb h2:nth-child(17) {
     order: 16;
   }
-
   #flexb p:nth-child(13) {
     order: 15;
   }
-
   #flexb img:nth-child(15) {
     order: 14;
   }
-
   #flexb h2:nth-child(14) {
     order: 13;
   }
-
   #flexb p:nth-child(10) {
     order: 12;
   }
-
   #flexb img:nth-child(12) {
     order: 11;
   }
-
   #flexb h2:nth-child(11) {
     order: 10;
   }
-
   #flexb p:nth-child(7) {
     order: 9;
   }
-
   #flexb img:nth-child(9) {
     order: 8;
   }
-
   #flexb h2:nth-child(8) {
     order: 7;
   }
-
   #flexb p:nth-child(4) {
     order: 6;
   }
-
   #flexb img:nth-child(6) {
     order: 5;
   }
-
   #flexb h2:nth-child(5) {
     order: 4;
   }
-
   #flexb p:nth-child(1) {
     order: 3;
   }
-
   #flexb img:nth-child(3) {
     order: 2;
   }
-
   #flexb h2:nth-child(2) {
     order: 1;
   }
-
   #flexb img {
     margin: 5% 0;
   }
-
   #flexb p {
     width: 100%;
     padding: 5% 5% 20% 5%;
     height: unset;
   }
-
   #flexb p:last-of-type {
     padding: 5%;
   }
-
   .s {
     position: relative;
     top: unset;
   }
-
   article {
     padding: 5%;
   }
-
   article p {
     padding: 5% 5%;
   }
