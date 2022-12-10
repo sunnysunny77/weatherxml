@@ -112,6 +112,17 @@ footer {
   background-position: center;
   background-image: url(../images/sticky.jpg);
   padding: 19.2% 10.8%;
+  position: relative;
+}
+#sticky::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #610a26;
+  opacity: 0.2;
 }
 
 article {
