@@ -14,11 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $fp = fopen($local_file,"w");
   $fp0 = fopen($local_file0,"w");
 
-  $ftp = ftp_connect($url);
-  ftp_login($ftp, $ftp_username, $ftp_userpass );
-  ftp_pasv($ftp, true) or die("Cannot switch to passive mode");
-
-  if (!file_exists($server_file) || !file_exists($server_file0) || time()-filemtime($server_file) > 0.5 * 3600 || time()-filemtime($server_file0) > 0.5 * 3600)  {
+  if (!file_exists($server_file) && !file_exists($server_file0) && time()-filemtime($server_file) > 0.5 * 3600 && time()-filemtime($server_file0) > 0.5 * 3600)  {
+    $ftp = ftp_connect($url);
+    ftp_login($ftp, $ftp_username, $ftp_userpass );
+    ftp_pasv($ftp, true) or die("Cannot switch to passive mode");
     if (ftp_fget($ftp, $fp, $server_file, FTP_BINARY, 0) && ftp_fget($ftp, $fp0, $server_file0, FTP_BINARY, 0)) {
       $res = var_dump(http_response_code(200));
     } else {
@@ -26,6 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       http_response_code(500);
     }
   } else {
+    $ftp = ftp_connect($url);
+    ftp_login($ftp, $ftp_username, $ftp_userpass );
+    ftp_pasv($ftp, true) or die("Cannot switch to passive mode");
     if (ftp_fget($ftp, $fp0, $server_file0, FTP_BINARY, 0)) {
       $res = var_dump(http_response_code(200));
     } else {
