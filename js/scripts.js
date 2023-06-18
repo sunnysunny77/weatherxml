@@ -103,8 +103,8 @@ function xml() {
 }
 
 window.addEventListener("load", function() {
-  xml();
   const xhr = new XMLHttpRequest();
   xhr.open("GET", "cont.php", false);
   xhr.send();
+  xml();
 });
