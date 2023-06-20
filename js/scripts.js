@@ -112,5 +112,5 @@ function xml() {
 }
 
 window.addEventListener("load", function() {
-  runXHR()
+  runXHR();
 });
