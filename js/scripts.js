@@ -1,19 +1,29 @@
 let parser = new DOMParser();
-let xmlFile0 = "IDW60920.xml";
-let xmlFile = "IDW12300.xml";
+const xmlFile0 = "IDW60920.xml";
+const xmlFile = "IDW12300.xml";
+let documentXML0;
+let documentXML;
 
 let txtcArray = [];
 let txt0Array = [];
 let txt1Array = [];
 let dateArray = [];
 
-function runXHR(url) {
+function runXHR() {
   const xhr = new XMLHttpRequest();
-  xhr.open("GET", url, false);
+  xhr.open("GET", xmlFile0, true);
   xhr.send();
-  if (xhr.readyState === 4 && xhr.status === 200) {
-    return parser.parseFromString(xhr.response, "text/xml");
-  }
+  xhr.addEventListener("load", () => {
+    const xhr1 = new XMLHttpRequest();
+    xhr1.addEventListener("load", () => {
+      documentXML = parser.parseFromString(xhr1.response, "text/xml");
+      xml();
+    });
+    xhr1.open("GET", xmlFile, true);
+    xhr1.send();
+    documentXML0 = parser.parseFromString(xhr.response, "text/xml");
+  });
+
 }
 
 function xmlDoc(t) {
@@ -86,8 +96,7 @@ function xmlDoc0(u) {
 }
 
 function xml() {
-  const documentXML0 = runXHR(xmlFile0);
-  const documentXML = runXHR(xmlFile);
+
   xmlDoc0(documentXML0.querySelectorAll("product")[0].querySelectorAll("observations")[0].querySelectorAll("station"));
   xmlDoc(documentXML.querySelectorAll("product")[0].querySelectorAll("forecast")[0].querySelectorAll("area"));
 
@@ -103,5 +112,5 @@ function xml() {
 }
 
 window.addEventListener("load", function() {
-  xml();
+  runXHR()
 });
