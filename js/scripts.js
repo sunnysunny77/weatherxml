@@ -1,112 +1,112 @@
 let parser = new DOMParser();
-const xmlFile0 = "IDW60920.xml";
-const xmlFile = "IDW12300.xml";
-let documentXML0;
-let documentXML;
+const xmlFileOne = "IDW60920.xml";
+const xmlFileTwo = "IDW12300.xml";
+let documentXMLone;
+let documentXMLtwo;
 
-let txtcArray = [];
-let txt0Array = [];
-let txt1Array = [];
+let txtArrayOne = [];
+let txtArrayTwo = [];
+let txtArrayThree = [];
 let dateArray = [];
 
 function runXHR() {
+
   const xhr = new XMLHttpRequest();
-  xhr.open("GET", xmlFile0, true);
+  xhr.open("GET", xmlFileOne, true);
   xhr.send();
   xhr.addEventListener("load", () => {
-    const xhr1 = new XMLHttpRequest();
-    xhr1.addEventListener("load", () => {
-      documentXML = parser.parseFromString(xhr1.response, "text/xml");
+    const xhr_nest = new XMLHttpRequest();
+    xhr_nest.addEventListener("load", () => {
+      documentXMLtwo = parser.parseFromString(xhr_nest.response, "text/xml");
       xml();
     });
-    xhr1.open("GET", xmlFile, true);
-    xhr1.send();
-    documentXML0 = parser.parseFromString(xhr.response, "text/xml");
+    xhr_nest.open("GET", xmlFileTwo, true);
+    xhr_nest.send();
+    documentXMLone = parser.parseFromString(xhr.response, "text/xml");
   });
 
 }
 
-function xmlDoc(t) {
-  for (let x = 0; x <= 6; x++) {
-    let txt0 = "";
-    let txt1 = "";
+function xmlDocTwo(param) {
+  for (let index = 0; index <= 6; index++) {
+    let txtOne = "";
+    let txtTwo = "";
     let date;
-    for (const element of t) {
-      if (element.querySelectorAll("forecast-period")[x]) {
-        let r = element.querySelectorAll("forecast-period")[x];
-        if (element.getAttribute("aac") === "WA_ME001") {
-          let q = r.querySelectorAll("text");
-          date = new Date(r.getAttribute("start-time-local"));
+    for (const obj of param) {
+      if (obj.querySelectorAll("forecast-period")[index]) {
+        const forecast_period = obj.querySelectorAll("forecast-period")[index];
+        if (obj.getAttribute("aac") === "WA_ME001") {
+          const text = forecast_period.querySelectorAll("text");
+          date = new Date(forecast_period.getAttribute("start-time-local"));
           date = date.toLocaleDateString();
-          for (const element_ of q) {
-            if (element_.getAttribute("type") === "forecast") {
-              txt0 += element_.childNodes[0].nodeValue;
+          for (const obj of text) {
+            if (obj.getAttribute("type") === "forecast") {
+              txtOne += obj.childNodes[0].nodeValue;
             }
           }
         }
-        if (element.getAttribute("aac") === "WA_PT053") {
-          let q = r.querySelectorAll("element");
-          let c = r.querySelectorAll("text");
-          for (const element of q) {
-            if (element.getAttribute("type") === "air_temperature_minimum") {
-              txt1 += `<br>Minimum&nbsp;${  element.childNodes[0].nodeValue  }&nbsp;°C`;
+        if (obj.getAttribute("aac") === "WA_PT053") {
+          const element = forecast_period.querySelectorAll("element");
+          const text = forecast_period.querySelectorAll("text");
+          for (const obj of element) {
+            if (obj.getAttribute("type") === "air_temperature_minimum") {
+              txtTwo += `<br>Minimum&nbsp;${  obj.childNodes[0].nodeValue  }&nbsp;°C`;
             }
-            if (element.getAttribute("type") === "air_temperature_maximum") {
-              txt1 += `<br>Maximum&nbsp;${  element.childNodes[0].nodeValue  }&nbsp;°C`;
+            if (obj.getAttribute("type") === "air_temperature_maximum") {
+              txtTwo += `<br>Maximum&nbsp;${  obj.childNodes[0].nodeValue  }&nbsp;°C`;
             }
-            if (element.getAttribute("type") === "forecast_icon_code") {
-              document.querySelectorAll(".x")[x].src = `./images/${  element.childNodes[0].nodeValue  }.png`;
+            if (obj.getAttribute("type") === "forecast_icon_code") {
+              document.querySelectorAll(".x")[index].src = `./images/${  obj.childNodes[0].nodeValue  }.png`;
             }
           }
-          for (const element of c) {
-            if (element.getAttribute("type") === "precis") {
-              document.querySelectorAll(".x")[x].alt = element.childNodes[0].nodeValue;
+          for (const obj of text) {
+            if (obj.getAttribute("type") === "precis") {
+              document.querySelectorAll(".x")[index].alt = obj.childNodes[0].nodeValue;
             }
           }
         }
       }
     }
-    txt0Array.push(txt0);
-    txt1Array.push(txt1);
+    txtArrayOne.push(txtOne);
+    txtArrayTwo.push(txtTwo);
     dateArray.push(date);
   }
 }
 
-function xmlDoc0(u) {
-  for (let x = 0; x <= 6; x++) {
-    let txtc = "";
-    for (const element of u) {
-      if (element.getAttribute("stn-name") === "PERTH METRO" && element.querySelectorAll("period")[0].querySelectorAll("level")[0].querySelectorAll("element")) {
-        let q = element.querySelectorAll("period")[0].querySelectorAll("level")[0].querySelectorAll("element");
-        for (const element of q) {
-          if (element.getAttribute("type") === "air_temperature") {
-            txtc += `<br>Current&nbsp;${  element.childNodes[0].nodeValue  }&nbsp;°C`;
+function xmlDocOne(param) {
+  for (let index = 0; index <= 6; index++) {
+    let txtThree = "";
+    for (const obj of param) {
+      if (obj.getAttribute("stn-name") === "PERTH METRO" && obj.querySelectorAll("period")[0].querySelectorAll("level")[0].querySelectorAll("element")) {
+        const element = obj.querySelectorAll("period")[0].querySelectorAll("level")[0].querySelectorAll("element");
+        for (const obj of element ) {
+          if (obj.getAttribute("type") === "air_temperature") {
+            txtThree += `<br>Current&nbsp;${   obj.childNodes[0].nodeValue  }&nbsp;°C`;
           }
-          if (element.getAttribute("type") === "maximum_air_temperature") {
-            txtc += `<br>Currrent Maximum&nbsp;${  element.childNodes[0].nodeValue  }&nbsp;°C`;
+          if (obj.getAttribute("type") === "maximum_air_temperature") {
+            txtThree += `<br>Currrent Maximum&nbsp;${   obj.childNodes[0].nodeValue  }&nbsp;°C`;
           }
-          if (element.getAttribute("type") === "minimum_air_temperature") {
-            txtc += `<br>Current Minimum&nbsp;${  element.childNodes[0].nodeValue  }&nbsp;°C`;
+          if (obj.getAttribute("type") === "minimum_air_temperature") {
+            txtThree += `<br>Current Minimum&nbsp;${   obj.childNodes[0].nodeValue  }&nbsp;°C`;
           }
         }
       }
     }
-    txtcArray.push(txtc);
+    txtArrayThree.push(txtThree);
   }
 }
 
 function xml() {
+  xmlDocOne(documentXMLone.querySelectorAll("product")[0].querySelectorAll("observations")[0].querySelectorAll("station"));
+  xmlDocTwo(documentXMLtwo.querySelectorAll("product")[0].querySelectorAll("forecast")[0].querySelectorAll("area"));
 
-  xmlDoc0(documentXML0.querySelectorAll("product")[0].querySelectorAll("observations")[0].querySelectorAll("station"));
-  xmlDoc(documentXML.querySelectorAll("product")[0].querySelectorAll("forecast")[0].querySelectorAll("area"));
-
-  for (let x = 0; x <= 6; x++) {
-    if (x < 1) {
-      document.querySelectorAll(".f")[x].innerHTML = dateArray[x];
-      document.querySelectorAll(".z")[x].innerHTML = txt0Array[x] + txt1Array[x] + txtcArray[x];
-    } else if (x >= 1) {
-      document.querySelectorAll(".f")[x].innerHTML = dateArray[x];
-      document.querySelectorAll(".z")[x].innerHTML = txt0Array[x] + txt1Array[x];
+  for (let index = 0; index <= 6; index++) {
+    if (index < 1) {
+      document.querySelectorAll(".f")[index].innerHTML = dateArray[index];
+      document.querySelectorAll(".z")[index].innerHTML = txtArrayOne[index] + txtArrayTwo[index] + txtArrayThree[index];
+    } else if (index >= 1) {
+      document.querySelectorAll(".f")[index].innerHTML = dateArray[index];
+      document.querySelectorAll(".z")[index].innerHTML = txtArrayOne[index] + txtArrayTwo[index];
     }
   }
 }
