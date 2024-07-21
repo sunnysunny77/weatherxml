@@ -1,11 +1,30 @@
 {
   "name": "bom",
-  "version": "1.0.0",
-  "description": "Weather App",
-  "main": "./js/scripts.js",
+  "type": "module",
+  "version": "6.0.0",
+  "description": "bom",
+  "main": "./js/app.js",
   "scripts": {
-    "build": "node ./node_modules/sass/sass.js ./css",
-    "watch": "node ./node_modules/sass/sass.js ./css -w"
+    "install": "cross-env-shell bash install.sh",
+    "install-cert": "run-script-os",
+    "install-cert:macos": "sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain $INIT_CWD/certs/ca.crt",
+    "install-cert:win32": "powershell Import-Certificate -FilePath %INIT_CWD%\\certs\\ca.crt -CertStoreLocation cert:\\CurrentUser\\Root",
+    "install-cert:default": "cross-env-shell bash trust.sh",
+    "serve": "node serve.cjs",
+    "php-server": "node php-server.js",
+    "open-server": "run-script-os",
+    "open-server:macos": "node --env-file=$INIT_CWD/.env open.js",
+    "open-server:win32": "node --env-file=%INIT_CWD%/.env open.js",
+    "open-server:default": "node --env-file=$INIT_CWD/.env open.js",
+    "watch-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed -w",
+    "build-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed",
+    "production-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed --no-source-map",
+    "watch-js": "rollup -c ./rollup.config-watch.mjs -w --sourcemap",
+    "build-js": "rollup -c ./rollup.config.mjs --sourcemap",
+    "production-js": "rollup -c ./rollup.config.mjs",
+    "watch": "concurrently \"npm:php-server\" \"npm:watch-css\" \"npm:watch-js\" \"npm:serve\" \"npm:open-server\"",
+    "build": "concurrently \"npm:build-css\" \"npm:build-js\"",
+    "production": "concurrently \"npm:production-css\" \"npm:production-js\""
   },
   "repository": {
     "type": "git",
@@ -17,7 +36,28 @@
     "url": "https://github.com/sunnysunny77/bom/issues"
   },
   "homepage": "https://github.com/sunnysunny77/bom#readme",
-  "dependencies": {
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "latest",
+    "@rollup/plugin-babel": "latest",
+    "@rollup/plugin-commonjs": "latest",
+    "@rollup/plugin-terser": "latest",
+    "bootstrap": "^5.3.3",
+    "concurrently": "latest",
+    "cross-env": "latest",
+    "dotenv": "latest",
+    "eslint": "latest",
+    "eslint-config-standard": "latest",
+    "express": "latest",
+    "fs": "latest",
+    "globals": "latest",
+    "http": "latest",
+    "https": "latest",
+    "open": "latest",
+    "php-server": "latest",
+    "rollup": "latest",
+    "rollup-plugin-livereload": "latest",
+    "rollup-plugin-sourcemaps": "latest",
+    "run-script-os": "latest",
     "sass": "latest"
   }
 }

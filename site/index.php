@@ -7,7 +7,9 @@
     <meta name="author" content="D.C" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="./css/app.min.css" rel="stylesheet" type="text/css" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="images/pwa-logo-small.png" />
     <?php
 
       $ftp_username = "anonymous";
@@ -87,6 +89,6 @@
         <li>D.C</li>
       </ul>
     </footer>
-    <script src="./js/scripts.js"></script>
+    <script src="./js/app.min.js" defer></script>
   </body>
 </html>

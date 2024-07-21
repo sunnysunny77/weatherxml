@@ -1,4 +1,6 @@
-/* css */
+@import "./variables";
+@import "./partials/breakpoints";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +8,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: $font;
   max-width: 1920px;
   margin: auto;
 }
@@ -17,41 +19,41 @@ article {
 }
 
 h2 {
-  color: #f9c0c3;
+  color: $h2;
 }
 
 p {
-  color: white;
-  font-size: large;
+  color: $p;
+  font-size: $fontsize;
 }
 
 header {
   background-blend-mode: screen;
   background-size: 100% 100%;
-  background-image: url(../images/ban.jpg);
-  padding: 0 6% 18% 6%;
+  background-image: $headerimg;
+  padding: $headerBgAspect;
 }
 
 header h1 {
-  color: #bf1349;
+  color: $headingtxt;
   padding: 50px;
 }
 
 header q {
-  color: #bf1349;
+  color: $headingtxt;
   margin-left: 5%;
-  font-size: large;
+  font-size: $fontsize;
 }
 
 nav {
-  background-color: #6e46dd;
+  background-color: $bg1;
   height: 75px;
 }
 
 li {
   display: inline;
   line-height: 75px;
-  color: mintcream;
+  color: $li;
   padding: 20px;
 }
 
@@ -62,7 +64,7 @@ li a {
 }
 
 footer {
-  background-image: linear-gradient(to bottom, #6e46dd, #9071e5 90%);
+  background-image: linear-gradient(to bottom, $bg1, $bg2 90%);
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -71,13 +73,14 @@ footer {
 }
 
 /* main */
+
 .s {
   position: sticky;
   top: 0;
 }
 
 .bg1 {
-  background-color: #6e46dd;
+  background-color: $bg1;
 }
 
 #flexb {
@@ -93,16 +96,16 @@ footer {
 }
 
 #flexb img {
-  width: 250px;
+  width: calc($stickypheight / 2);
   align-self: center;
-  padding: 25px;
+  padding: $iconpading;
 }
 
 #flexb p {
-  height: 500px;
+  height: $stickypheight;
   line-height: 2;
-  padding: 1.5% 2.25% 0 2.25%;
-  width: 62%;
+  padding: $stickyppadding;
+  width: $stickypwidth;
   text-align: center;
 }
 
@@ -110,24 +113,24 @@ footer {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-image: url(../images/sticky.jpg);
-  padding: 19.2% 10.8%;
+  background-image: $stickyimg;
+  padding: $imageBgAspect;
   position: relative;
-}
-#sticky::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #610a26;
-  opacity: 0.2;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $stickyblendcolor;
+    opacity: 0.2;
+  }
 }
 
 article {
-  background-color: #6e46dd;
-  color: white;
+  background-color: $bg1;
+  color: $p;
   min-height: 300px;
   position: relative;
   display: flex;
@@ -144,23 +147,24 @@ article p {
   align-self: baseline;
 }
 
-@media only screen and (min-width: 993px) {
+@include min_lg { 
   #flexb img:last-of-type {
-    margin: 125px 0;
+    margin: calc($stickypheight / 4) 0;
   }
   #flexb p:last-of-type {
     align-self: baseline;
     height: unset;
-    min-height: 250px;
+    min-height: calc($stickypheight / 2);
   }
 }
-@media only screen and (max-width: 993px) {
+
+@include max_lg { 
   header h1 {
-    padding: 5%;
+    padding: $paddingmobile;
   }
   #flexb {
     flex-direction: column;
-    padding: 5%;
+    padding: $paddingmobile;
     justify-content: unset;
     flex-wrap: unset;
     align-items: unset;
@@ -229,15 +233,15 @@ article p {
     order: 1;
   }
   #flexb img {
-    margin: 5% 0;
+    margin: $paddingmobile 0;
   }
   #flexb p {
     width: 100%;
-    padding: 5% 5% 20% 5%;
+    padding: $paddingmobile $paddingmobile $paddingmobile * 4 $paddingmobile;
     height: unset;
   }
   #flexb p:last-of-type {
-    padding: 5%;
+    padding: $paddingmobile;
   }
   .s {
     position: relative;
@@ -247,11 +251,9 @@ article p {
     background-attachment: unset;
   }
   article {
-    padding: 5%;
+    padding: $paddingmobile;
   }
   article p {
-    padding: 5% 5%;
+    padding: $paddingmobile $paddingmobile;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
