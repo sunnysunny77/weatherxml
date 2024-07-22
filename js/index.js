@@ -1,9 +1,9 @@
 import { service_worker } from "./service_worker.js";
 import { events } from "./utillites.js";
-import {  xml } from "./xml.js";
+import {  run_fetch } from "./xml.js";
 
 events(window, "load", () =>{
   
-  service_worker(); 
-  xml();
+ // service_worker(); 
+ run_fetch();
 });
