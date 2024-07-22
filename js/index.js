@@ -4,6 +4,6 @@ import {  run_fetch } from "./xml.js";
 
 events(window, "load", () =>{
   
- // service_worker(); 
+ service_worker(); 
  run_fetch();
 });
