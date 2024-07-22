@@ -4,7 +4,6 @@ const fs = require("fs");
 const express = require("express");
 const app = express();
 app.use(express.static("site"));
-app.use('/scss', express.static('scss'))
 app.get('/', function(req, res) {
     req.pipe(http.request({
         host: "127.0.0.1",
