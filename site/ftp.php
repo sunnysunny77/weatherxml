@@ -7,8 +7,9 @@
     $server_file = "/anon/gen/fwo/IDW12300.xml";
     $local_file0 = "IDW60920.xml";
     $server_file0 = "/anon/gen/fwo/IDW60920.xml";
+    $time = time();
 
-    if (time()-filemtime($local_file0) > 60000 || time()-filemtime($local_file) > 60000 ) {
+    if ($time - filemtime($local_file) > 60 * 10 || $time - filemtime($local_file0) > 60 * 10 ) {
 
         $fp = fopen($local_file,"w");
         $fp0 = fopen($local_file0,"w");
