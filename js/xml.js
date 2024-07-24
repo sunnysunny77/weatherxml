@@ -66,7 +66,7 @@ const xml_doc_two = (param) => {
     }
 
     return [txt_array_one, txt_array_two, date_array];
-}
+};
 
 const xml_doc_one = (param) => {
 
@@ -102,7 +102,7 @@ const xml_doc_one = (param) => {
     }
 
     return txtArray; 
-}
+};
 
 const xml_loop = (parm_1, param_2) => {
 
@@ -121,7 +121,7 @@ const xml_loop = (parm_1, param_2) => {
             document.querySelectorAll(".z")[index].innerHTML = retun_two[0][index] + retun_two[1][index];
         }
     }
-}
+};
 
 export const run_fetch = async () => {
     
@@ -132,4 +132,4 @@ export const run_fetch = async () => {
     const xml_string_two = await response_two.text();
     const xml_doc_two = new DOMParser().parseFromString(xml_string_two, "text/xml");
     xml_loop(xml_doc_one,  xml_doc_two);
-}
+};
