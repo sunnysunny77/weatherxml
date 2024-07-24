@@ -1,8 +1,8 @@
 import globals from "globals";
-import standard from "eslint-config-standard";
+import js from "@eslint/js";
 
 export default [
-  standard,
+  js.configs.recommended,
   {
     rules: {
       semi: ["warn", "always"],

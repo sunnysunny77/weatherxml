@@ -46,7 +46,6 @@
     "cross-env": "latest",
     "dotenv": "latest",
     "eslint": "latest",
-    "eslint-config-standard": "latest",
     "express": "latest",
     "fs": "latest",
     "globals": "latest",
