@@ -3,7 +3,7 @@
   "type": "module",
   "version": "6.0.0",
   "description": "bom",
-  "main": "./js/app.js",
+  "main": "./js/index.js",
   "scripts": {
     "install": "cross-env-shell bash install.sh",
     "install-cert": "run-script-os",
