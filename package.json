@@ -7,9 +7,9 @@
   "scripts": {
     "install": "cross-env-shell bash install.sh",
     "install-cert": "run-script-os",
-    "install-cert:macos": "sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain $INIT_CWD/certs/ca.crt",
-    "install-cert:win32": "powershell Import-Certificate -FilePath %INIT_CWD%\\certs\\ca.crt -CertStoreLocation cert:\\CurrentUser\\Root",
-    "install-cert:default": "cross-env-shell bash trust.sh",
+    "install-cert:macos": "cross-env-shell bash mac-trust.sh",
+    "install-cert:win32": "cross-env-shell bash win-trust.sh",
+    "install-cert:default": "cross-env-shell bash ubuntu-trust.sh",
     "serve": "node serve.cjs",
     "php-server": "node php-server.js",
     "open-server": "run-script-os",
