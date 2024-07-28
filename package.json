@@ -1,8 +1,8 @@
 {
-  "name": "bom",
+  "name": "weatherxml",
   "type": "module",
   "version": "6.0.0",
-  "description": "bom",
+  "description": "weatherxml",
   "main": "./js/index.js",
   "scripts": {
     "install": "cross-env-shell bash install.sh",
@@ -28,14 +28,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunnysunny77/bom.git"
+    "url": "git+https://github.com/sunnysunny77/weatherxml.git"
   },
   "author": "D.C",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sunnysunny77/bom/issues"
+    "url": "https://github.com/sunnysunny77/weatherxml/issues"
   },
-  "homepage": "https://github.com/sunnysunny77/bom#readme",
+  "homepage": "https://github.com/sunnysunny77/weatherxml#readme",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "latest",
     "@rollup/plugin-babel": "latest",
