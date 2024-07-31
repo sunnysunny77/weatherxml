@@ -17,8 +17,10 @@
     sudo apt install libnss3-tools
     <br>
     <br>
+    and if you install nodejs with nvm 
     <br>
-    <br>  
+    <br>
+    sudo ln -s "$(which node)" /usr/bin/node  
     <br>
     <br>
     npm i "install app"
@@ -29,7 +31,7 @@
     </h1>
     <br>
     <br>
-    npm run serve "start node server",
+    npm run https-server "start node https server",
     <br>
     npm run php-server "start php server",
     <br>

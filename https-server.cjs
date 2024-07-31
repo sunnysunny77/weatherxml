@@ -2,9 +2,14 @@ const https = require("https");
 const http = require("http");
 const fs = require("fs");
 const express = require("express");
+const vhost = require("vhost");
 const app = express();
-app.use(express.static("site"));
-app.get("/", function(req, res) {
+const sub_domain = express();
+const local_domian = express();
+
+app.use(vhost(`${process.env.CN}`, sub_domain));
+app.use(vhost("localhost",local_domian));
+app.use((req, res) => {
     req.pipe(http.request({
         host: "127.0.0.1",
         port: "2998",
@@ -17,6 +22,7 @@ app.get("/", function(req, res) {
         resp.pipe(res);
     }));
 });
+
 https.createServer({
     key: fs.readFileSync("./certs/server.key"),
     cert: fs.readFileSync("./certs/server.crt")

@@ -1,7 +1,7 @@
 {
   "name": "weatherxml",
   "type": "module",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "weatherxml",
   "main": "./js/index.js",
   "scripts": {
@@ -10,21 +10,21 @@
     "install-cert:macos": "cross-env-shell bash mac-trust.sh",
     "install-cert:win32": "cross-env-shell bash win-trust.sh",
     "install-cert:default": "cross-env-shell bash ubuntu-trust.sh",
-    "serve": "node serve.cjs",
+    "edit-hosts": "run-script-os",
+    "edit-hosts:win32": "powershell start-process -Verb runas powershell -ArgumentList '–ExecutionPolicy Bypass', '-noexit', 'powershell -File %INIT_CWD%\\win32.ps1'",
+    "edit-hosts:default": "sudo node --env-file=.env edit-hosts.cjs",
+    "https-server": "node --env-file=.env https-server.cjs",
     "php-server": "node php-server.js",
-    "open-server": "run-script-os",
-    "open-server:macos": "node --env-file=$INIT_CWD/.env open.js",
-    "open-server:win32": "node --env-file=%INIT_CWD%/.env open.js",
-    "open-server:default": "node --env-file=$INIT_CWD/.env open.js",
+    "open-server": "node --env-file=.env open.js",
     "watch-css": "sass --embed-sources ./scss/app.scss:./site/css/app.min.css --style compressed -w",
     "build-css": "sass --embed-sources ./scss/app.scss:./site/css/app.min.css --style compressed",
     "production-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed --no-source-map",
     "watch-js": "rollup -c ./rollup.config-watch.mjs -w --sourcemap",
     "build-js": "rollup -c ./rollup.config.mjs --sourcemap",
     "production-js": "rollup -c ./rollup.config.mjs",
-    "watch": "concurrently \"npm:php-server\" \"npm:watch-css\" \"npm:watch-js\" \"npm:serve\" \"npm:open-server\"",
-    "build": "concurrently \"npm:build-css\" \"npm:build-js\"",
-    "production": "concurrently \"npm:production-css\" \"npm:production-js\""
+    "watch": "concurrently -r \"npm:php-server\" \"npm:watch-css\" \"npm:watch-js\" \"npm:https-server\" \"npm:open-server\"",
+    "build": "concurrently -r \"npm:build-css\" \"npm:build-js\"",
+    "production": "concurrently -r \"npm:production-css\" \"npm:production-js\""
   },
   "repository": {
     "type": "git",
@@ -49,6 +49,7 @@
     "express": "latest",
     "fs": "latest",
     "globals": "latest",
+    "hostile": "latest",
     "http": "latest",
     "https": "latest",
     "open": "latest",
@@ -57,6 +58,7 @@
     "rollup-plugin-livereload": "latest",
     "rollup-plugin-sourcemaps": "latest",
     "run-script-os": "latest",
-    "sass": "latest"
+    "sass": "latest",
+    "vhost": "latest"
   }
 }
