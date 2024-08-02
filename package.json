@@ -22,9 +22,10 @@
     "watch-js": "rollup -c ./rollup.config-watch.mjs -w --sourcemap",
     "build-js": "rollup -c ./rollup.config.mjs --sourcemap",
     "production-js": "rollup -c ./rollup.config.mjs",
-    "watch": "cross-env-shell npm run open-server & npm run watch-css & bash watch-master.sh",
-    "build": "npm run build-css & npm run build-js",
-    "production": "run production-css & npm run production-js"
+    "watch-master": "cross-env-shell bash watch-master.sh",
+    "watch": "npm-run-all --parallel open-server watch-css watch-master",
+    "build": "npm-run-all --parallel build-css build-js",
+    "production": "npm-run-all --parallel production-css production-js"
   },
   "repository": {
     "type": "git",
@@ -51,6 +52,7 @@
     "hostile": "latest",
     "http": "latest",
     "https": "latest",
+    "npm-run-all": "^4.1.5",
     "open": "latest",
     "rollup": "latest",
     "rollup-plugin-livereload": "latest",
