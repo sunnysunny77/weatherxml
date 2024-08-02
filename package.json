@@ -22,9 +22,9 @@
     "watch-js": "rollup -c ./rollup.config-watch.mjs -w --sourcemap",
     "build-js": "rollup -c ./rollup.config.mjs --sourcemap",
     "production-js": "rollup -c ./rollup.config.mjs",
-    "watch": "cross-env-shell bash watch-master.sh",
-    "build": "cross-env-shell bash build-master.sh",
-    "production": "cross-env-shell bash production-master.sh"
+    "watch": "cross-env-shell npm run open-server & npm run watch-css & bash watch-master.sh",
+    "build": "npm run build-css & npm run build-js",
+    "production": "run production-css & npm run production-js"
   },
   "repository": {
     "type": "git",
