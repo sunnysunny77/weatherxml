@@ -26,4 +26,6 @@ app.use((req, res) => {
 https.createServer({
     key: fs.readFileSync("./certs/server.key"),
     cert: fs.readFileSync("./certs/server.crt")
-},app).listen(3000);
+}, app).listen(3000, () => {
+    console.log(`server live: https://${process.env.CN}:3000`)
+});
