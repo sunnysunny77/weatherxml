@@ -22,9 +22,9 @@
     "watch-js": "rollup -c ./rollup.config-watch.mjs -w --sourcemap",
     "build-js": "rollup -c ./rollup.config.mjs --sourcemap",
     "production-js": "rollup -c ./rollup.config.mjs",
-    "watch": "concurrently -r \"npm:php-server\" \"npm:https-server\" \"npm:watch-css\" \"npm:watch-js\" \"npm:open-server\"",
-    "build": "concurrently -r \"npm:build-css\" \"npm:build-js\"",
-    "production": "concurrently -r \"npm:production-css\" \"npm:production-js\""
+    "watch": "npm run php-server & npm run https-server & npm run watch-css & npm run watch-js & npm run open-server",
+    "build": "npm run build-css & npm run build-js",
+    "production": "npm run production-css & npm run production-js"
   },
   "repository": {
     "type": "git",
@@ -42,7 +42,6 @@
     "@rollup/plugin-commonjs": "latest",
     "@rollup/plugin-terser": "latest",
     "bootstrap": "^5.3.3",
-    "concurrently": "latest",
     "cross-env": "latest",
     "dotenv": "latest",
     "eslint": "latest",
