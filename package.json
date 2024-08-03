@@ -15,7 +15,6 @@
     "trust-hosts:default": "sudo $(which node) --env-file=.env trust-hosts.cjs",
     "https-server": "node --env-file=.env https-server.cjs",
     "php-server": "cross-env-shell bash php-server.sh",
-    "open-server": "node --env-file=.env open-server.js",
     "watch-css": "cross-env-shell bash sass-watch.sh",
     "build-css": "cross-env-shell bash sass-build.sh",
     "production-css": "cross-env-shell bash sass-production.sh",

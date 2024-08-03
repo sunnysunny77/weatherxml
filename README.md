@@ -31,9 +31,6 @@
     <br>
     npm run php-server "start php server",
     <br>
-    npm run open-server "open the browser",
-    <br>
-    <br>
     npm run watch-css "watch-css" 
     <br>
     npm run build-css "build-css"
