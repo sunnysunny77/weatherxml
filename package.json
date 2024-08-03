@@ -22,8 +22,7 @@
     "watch-js": "rollup -c ./rollup.config-watch.mjs -w --sourcemap",
     "build-js": "rollup -c ./rollup.config-build-production.mjs --sourcemap",
     "production-js": "rollup -c ./rollup.config-build-production.mjs",
-    "watch-master": "cross-env-shell bash watch-master.sh",
-    "watch": "npm-run-all --parallel open-server watch-css watch-master",
+    "watch": "cross-env-shell bash watch.sh",
     "build": "npm-run-all --parallel build-css build-js",
     "production": "npm-run-all --parallel production-css production-js"
   },
@@ -53,7 +52,6 @@
     "http": "latest",
     "https": "latest",
     "npm-run-all": "latest",
-    "open": "latest",
     "rollup": "latest",
     "rollup-plugin-livereload": "latest",
     "rollup-plugin-sourcemaps": "latest",

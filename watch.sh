@@ -16,6 +16,10 @@ npm run https-server &
 
 S3=$!
 
+npm run watch-css &
+
+S4=$!
+
 wait
  
-kill $S1 $S2 $S3
+kill $S1 $S2 $S3 $S4
