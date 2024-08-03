@@ -1,10 +1,20 @@
 #!/bin/bash
 
+set -e
+
 source $INIT_CWD/.env
 
-if [ ! -f $INIT_CWD/conf/ca.conf ] && [ ! -f $INIT_CWD/conf/csr.conf ] && [ ! -f $INIT_CWD/conf/cert.conf ] && [ ! -f $INIT_CWD/certs/ca.key ] && [ ! -f $INIT_CWD/certs/ca.crt ] && [ ! -f $INIT_CWD/certs/ca.srl ] && [ ! -f $INIT_CWD/certs/server.csr ] && [ ! -f $INIT_CWD/certs/server.crt ] && [ ! -f $INIT_CWD/certs/server.key ]; then 
+if [ ! -f $INIT_CWD/conf/ca.conf ] && \
+   [ ! -f $INIT_CWD/conf/csr.conf ] && \
+   [ ! -f $INIT_CWD/conf/cert.conf ] && \
+   [ ! -f $INIT_CWD/certs/ca.key ] && \
+   [ ! -f $INIT_CWD/certs/ca.crt ] && \
+   [ ! -f $INIT_CWD/certs/ca.srl ] && \
+   [ ! -f $INIT_CWD/certs/server.csr ] && \
+   [ ! -f $INIT_CWD/certs/server.crt ] && \
+   [ ! -f $INIT_CWD/certs/server.key ]; then
 
-echo "Installing certificates";
+echo "Create certificates"
 
 echo -e "[ req ]
 prompt = no\n\
@@ -87,8 +97,16 @@ openssl x509 \
 -sha256 \
 -extfile $INIT_CWD/conf/cert.conf
 
-npm run install-cert
+echo "Trust certificates"
 
-npm run edit-hosts
+npm run trust-cert
+
+echo "Trust hosts"
+
+npm run trust-hosts
+
+else
+
+echo "Certificate detected, deleted all files in conf and certs folders";
 
 fi
