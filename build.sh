@@ -7,3 +7,5 @@ set -x
 npm run build-css &
 
 npm run build-js &
+
+wait
