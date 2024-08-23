@@ -19,7 +19,7 @@ const xml_doc_two = (param) => {
 
                     const text = forecast_period.querySelectorAll("text");
                     date = new Date(forecast_period.getAttribute("start-time-local"));
-                    date = date.toLocaleDateString();
+                    date = date.toLocaleDateString("en-AU", { timeZone: "Australia/Perth" });
                     for (const obj of text) {
 
                         if (obj.getAttribute("type") === "forecast") {
