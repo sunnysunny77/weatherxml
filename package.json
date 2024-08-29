@@ -11,7 +11,7 @@
     "trust-cert:win32": "cross-env-shell bash win-trust.sh",
     "trust-cert:default": "cross-env-shell bash ubuntu-trust.sh",
     "trust-hosts": "run-script-os",
-    "trust-hosts:win32": "powershell start-process -Verb runas powershell -ArgumentList '–ExecutionPolicy Bypass', '-noexit', 'powershell -File %INIT_CWD%\\trust-hosts.ps1'",
+    "trust-hosts:win32": "powershell start-process -Verb runas powershell -ArgumentList '-ExecutionPolicy Bypass', '-noexit', 'powershell -File %INIT_CWD%\\trust-hosts.ps1'",
     "trust-hosts:default": "sudo $(which node) --env-file=.env trust-hosts.cjs",
     "https-server": "node --env-file=.env https-server.cjs",
     "php-server": "cross-env-shell bash php-server.sh",
