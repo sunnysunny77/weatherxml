@@ -19,15 +19,6 @@
     <header>
       <h1>Perth</h1>
     </header>
-    <nav>
-      <ul>
-        <li>
-          <a target="bom" href="http://www.bom.gov.au/catalogue/anon-ftp.shtml"
-            >Bureau of Meteorology</a
-          >
-        </li>
-      </ul>
-    </nav>
     <main>
       <section id="flexb" class="bg1">
         <p class="z s bg1"></p>

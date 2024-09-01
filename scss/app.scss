@@ -44,24 +44,6 @@ header h1 {
   padding: 50px;
 }
 
-nav {
-  background-color: $bg1;
-  height: 75px;
-}
-
-li {
-  display: inline;
-  line-height: 75px;
-  color: $li;
-  padding: 20px;
-}
-
-li a {
-  text-decoration: none;
-  cursor: pointer;
-  color: inherit;
-}
-
 footer {
   background-image: linear-gradient(to bottom, $bg1, $bg2 90%);
   height: 200px;
@@ -88,10 +70,12 @@ footer {
   padding: 0;
   align-items: center;
   justify-content: space-evenly;
+  padding-top: 1.5%;
 }
 
 #flexb h2 {
   align-self: flex-start;
+  padding-top: 0.5%;
 }
 
 #flexb img {
