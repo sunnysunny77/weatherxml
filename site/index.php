@@ -21,25 +21,25 @@
     </header>
     <main>
       <section id="flexb" class="bg1">
-        <p class="z s bg1"></p>
+        <p class="z sticky bg1"></p>
         <h2 class="f"></h2>
         <img class="x" />
-        <p class="z s bg1"></p>
+        <p class="z sticky bg1"></p>
         <h2 class="f"></h2>
         <img class="x" />
-        <p class="z s bg1"></p>
+        <p class="z sticky bg1"></p>
         <h2 class="f"></h2>
         <img class="x" />
-        <p class="z s bg1"></p>
+        <p class="z sticky bg1"></p>
         <h2 class="f"></h2>
         <img class="x" />
-        <p class="z s bg1"></p>
+        <p class="z sticky bg1"></p>
         <h2 class="f"></h2>
         <img class="x" />
-        <p class="z s bg1"></p>
+        <p class="z sticky bg1"></p>
         <h2 class="f"></h2>
         <img class="x" />
-        <p class="z s bg1"></p>
+        <p class="z sticky bg1"></p>
         <h2 class="f"></h2>
         <img class="x" />
       </section>
