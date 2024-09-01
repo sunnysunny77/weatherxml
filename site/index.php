@@ -17,7 +17,12 @@
 
   <body>
     <header>
-      <h1>Perth</h1>
+      <h1>        
+        <?php
+          date_default_timezone_set("Australia/Perth");
+          echo  date("g:i a") . " &mdash; Perth";
+        ?>
+      </h1>
     </header>
     <main>
       <section id="flexb" class="bg1">
