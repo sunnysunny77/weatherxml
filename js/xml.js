@@ -46,7 +46,7 @@ const xml_doc_two = (param) => {
                         }
                         if (obj.getAttribute("type") === "forecast_icon_code") {
 
-                           document.querySelectorAll(".x")[index].src = `./images/${  obj.childNodes[0].nodeValue  }.png`;
+                           document.querySelectorAll(".x")[index].src = `./images/${  obj.childNodes[0].nodeValue  }.webp`;
 
                         }
                     }

@@ -43,9 +43,9 @@
         <h2 class="f"></h2>
         <img class="x" />
       </section>
-      <section id="sticky" class="s"></section>
+      <section id="sticky" class="sticky"></section>
       <article>
-        <h2>Information</h2>
+        <h2>Info</h2>
         <p>
           The Bureau of Meteorology makes a number of real-time forecast,
           warning and observation products and analysis charts available freely
@@ -56,9 +56,6 @@
       </article>
     </main>
     <footer>
-      <ul>
-        <li>D.C</li>
-      </ul>
     </footer>
     <script src="./js/app.min.js" defer></script>
   </body>

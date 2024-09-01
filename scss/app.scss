@@ -33,10 +33,8 @@ p {
 }
 
 header {
-  background-blend-mode: screen;
-  background-size: 100% 100%;
-  background-image: $headerimg;
   padding: $headerBgAspect;
+  background-color: $bg3;
 }
 
 header h1 {
@@ -44,31 +42,15 @@ header h1 {
   padding: 50px;
 }
 
-li {
-  display: inline;
-  line-height: 75px;
-  color: $li;
-  padding: 20px;
-}
-
-li a {
-  text-decoration: none;
-  cursor: pointer;
-  color: inherit;
-}
 
 footer {
   background-image: linear-gradient(to bottom, $bg1, $bg2 90%);
   height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 /* main */
 
-.s {
+.sticky {
   position: sticky;
   top: 0;
 }
@@ -239,7 +221,7 @@ article p {
   #flexb p:last-of-type {
     padding: $paddingmobile;
   }
-  .s {
+  .sticky {
     position: relative;
     top: unset;
   }
