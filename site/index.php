@@ -17,14 +17,13 @@
 
   <body>
     <header>
-      <h1>Weather</h1>
-      <q>Perth BOM</q>
+      <h1>Perth</h1>
     </header>
     <nav>
       <ul>
         <li>
           <a target="bom" href="http://www.bom.gov.au/catalogue/anon-ftp.shtml"
-            >BOM</a
+            >Bureau of Meteorology</a
           >
         </li>
       </ul>
@@ -55,7 +54,7 @@
       </section>
       <section id="sticky" class="s"></section>
       <article>
-        <h2>Article</h2>
+        <h2>Information</h2>
         <p>
           The Bureau of Meteorology makes a number of real-time forecast,
           warning and observation products and analysis charts available freely
