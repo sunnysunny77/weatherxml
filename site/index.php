@@ -4,6 +4,7 @@
     <?php
       require_once "./ftp.php";
     ?>
+    <link rel="preload" href="./font/NunitoSans.ttf" as="font" type="font/ttf" crossorigin="" />
     <meta charset="utf-8" />
     <meta name="description" content="Weather in Perth" />
     <meta name="keywords" content="Perth, Bom, Forecast" />
@@ -49,18 +50,9 @@
         <img class="x" />
       </section>
       <section id="sticky" class="sticky"></section>
-      <article>
-        <h2>Info</h2>
-        <p>
-          The Bureau of Meteorology makes a number of real-time forecast,
-          warning and observation products and analysis charts available freely
-          via the web and FTP. The Bureau's Public Access Services encompass a
-          wide range of free weather forecast, warning and information services,
-          available to the general public on a 24 hour, seven days a week basis.
-        </p>
-      </article>
     </main>
     <footer>
+      <p><i class="fa-regular fa-copyright" ></i>&nbsp;<?php echo date("Y"); ?></p>
     </footer>
     <script src="./js/app.min.js" defer></script>
   </body>
