@@ -18,8 +18,3 @@ export const get_position = (element) => {
   
   return y_position;
 };
-
-export const preload_image = (url) => {
-  var img = new Image();
-  img.src = url;
-};
