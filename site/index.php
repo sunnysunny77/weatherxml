@@ -29,25 +29,25 @@
       <section id="flexb" class="bg1">
         <p class="z sticky bg1"></p>
         <h2 class="f"></h2>
-        <img class="x" />
+        <img width="200" height="200" class="x" />
         <p class="z sticky bg1"></p>
         <h2 class="f"></h2>
-        <img class="x" />
+        <img width="200" height="200" class="x" />
         <p class="z sticky bg1"></p>
         <h2 class="f"></h2>
-        <img class="x" />
+        <img width="200" height="200" class="x" />
         <p class="z sticky bg1"></p>
         <h2 class="f"></h2>
-        <img class="x" />
+        <img width="200" height="200" class="x" />
         <p class="z sticky bg1"></p>
         <h2 class="f"></h2>
-        <img class="x" />
+        <img width="200" height="200" class="x" />
         <p class="z sticky bg1"></p>
         <h2 class="f"></h2>
-        <img class="x" />
+        <img width="200" height="200" class="x" />
         <p class="z sticky bg1"></p>
         <h2 class="f"></h2>
-        <img class="x" />
+        <img width="200" height="200" class="x" />
       </section>
       <section id="sticky" class="sticky"></section>
     </main>
