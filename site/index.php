@@ -4,7 +4,7 @@
     <?php
       require_once "./ftp.php";
     ?>
-    <link rel="preload" href="./font/NunitoSans.ttf" as="font" type="font/ttf" crossorigin="" />
+    <script src="./js/preload.js"></script>
     <meta charset="utf-8" />
     <meta name="description" content="Weather in Perth" />
     <meta name="keywords" content="Perth, Bom, Forecast" />
@@ -21,7 +21,7 @@
       <h1>        
         <?php
           date_default_timezone_set("Australia/Perth");
-          echo  date("g:i a") . " &mdash; Perth";
+          echo  date("D g:i a") . " &mdash; Perth";
         ?>
       </h1>
     </header>

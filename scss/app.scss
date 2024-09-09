@@ -1,6 +1,8 @@
 @import "./variables";
 @import "./partials/font";
 @import "./partials/breakpoints";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
 
 * {
   box-sizing: border-box;
@@ -79,7 +81,8 @@ footer {
 }
 
 #flexb img {
-  width: calc($stickypheight / 2);
+  width: fit-content;
+  height: 100%;
   align-self: center;
   padding: $iconpading;
   filter: invert(63%) contrast(188%);
@@ -218,6 +221,11 @@ article h2 {
     width: 100%;
     padding: $paddingmobile $paddingmobile $paddingmobile * 4 $paddingmobile;
     height: unset;
+  }
+  #flexb img {
+    width: 34%;
+    max-width: 250px;
+    min-width: 200px;
   }
   #flexb p:last-of-type {
     padding: $paddingmobile;
