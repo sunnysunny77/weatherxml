@@ -3,8 +3,30 @@ self.addEventListener("install", function(event) {
   event.waitUntil(
     caches.open("v1").then(function(cache) {
       return cache.addAll([
+        "./",
+        "./index.php",
         "./css/app.min.css",
-        "./js/app.min.js"
+        "./js/app.min.js",
+        "./font/NunitoSans.ttf",
+        "./webfonts/fa-regular-400.woff2",
+        "./images/1.webp",
+        "./images/2.webp",
+        "./images/3.webp",
+        "./images/4.webp",
+        "./images/6.webp",
+        "./images/8.webp",
+        "./images/9.webp",
+        "./images/10.webp",
+        "./images/11.webp",
+        "./images/12.webp",
+        "./images/13.webp",
+        "./images/14.webp",
+        "./images/15.webp",
+        "./images/16.webp",
+        "./images/17.webp",
+        "./images/18.webp",
+        "./images/19.webp",
+        "./images/sticky.webp",
       ]);
     })
   );
@@ -12,28 +34,16 @@ self.addEventListener("install", function(event) {
 
 self.addEventListener("fetch", event => {
 
-  if (event.request.destination === "document") {
+  event.respondWith(caches.open("v1").then((cache) => {
 
-    event.respondWith(fetch(event.request).catch(() => {
+      return fetch(event.request).then((networkResponse) => {
 
-          return caches.match(event.request);
-      })
-    );
-  } else {
+        cache.put(event.request, networkResponse.clone());
 
-    event.respondWith(caches.open("v1").then((cache) => {
+        return networkResponse;
+      }).catch(() => {
 
-      return cache.match(event.request).then((cachedResponse) => {
-
-        const fetchedResponse = fetch(event.request).then((networkResponse) => {
-
-          cache.put(event.request, networkResponse.clone());
-
-          return networkResponse;
-        });
-
-        return cachedResponse || fetchedResponse;
-      });
-    }));
-  }
+        return caches.match(event.request);
+    } );
+  }));
 });
