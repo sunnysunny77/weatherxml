@@ -27,6 +27,8 @@ self.addEventListener("install", function(event) {
         "./images/18.webp",
         "./images/19.webp",
         "./images/sticky.webp",
+        "./IDW12300.xml",
+        "./IDW60920.xml"
       ]);
     })
   );
