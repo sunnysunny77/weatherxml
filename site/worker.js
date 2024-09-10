@@ -44,21 +44,6 @@ self.addEventListener("install", (event) => {
   );
 });
 
-self.addEventListener("activate", (event) => {
-  console.log("Service worker is activated");
-
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return cacheNames.map((cache) => {
-        if (cache !== cacheName) {
-          console.log("Clearing old caches");
-          caches.delete(cache);
-        }
-      });
-    })
-  );
-});
-
 self.addEventListener("fetch", (event) => {
   console.log("Fetching via Service worker");
 
