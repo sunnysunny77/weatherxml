@@ -25,6 +25,7 @@ const cacheAssets = [
   "./images/17.webp",
   "./images/18.webp",
   "./images/19.webp",
+  "./images/placeholder.webp",
   "./images/sticky.webp",
   "./IDW12300.xml",
   "./IDW60920.xml"

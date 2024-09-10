@@ -81,10 +81,10 @@ footer {
 }
 
 #flexb img {
-  width: fit-content;
+  width: 200px;
   height: 100%;
   align-self: center;
-  padding: $iconpading;
+  margin: $iconmargin;
   filter: invert(63%) contrast(188%);
 }
 
