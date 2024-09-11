@@ -4,8 +4,11 @@ const cacheName = `weather-v${version}`;
 const cacheAssets = [
   "./",
   "./index.php",
+  "./favicon.ico",
+  "./manifest.json",
   "./css/app.min.css",
   "./js/app.min.js",
+  "./js/preload.js",
   "./font/NunitoSans.ttf",
   "./webfonts/fa-regular-400.woff2",
   "./images/1.webp",
@@ -27,6 +30,8 @@ const cacheAssets = [
   "./images/19.webp",
   "./images/placeholder.webp",
   "./images/sticky.webp",
+  "./images/pwa-logo-small.webp",
+  "./images/pwa-logo.webp",
   "./IDW12300.xml",
   "./IDW60920.xml"
 ];
