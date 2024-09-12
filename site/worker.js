@@ -62,7 +62,7 @@ const first = async (req) => {
 
       const cache = await caches.open(cacheName);
 
-      const match = await caches.match(req);
+      const match = await cache.match(req);
 
       if (cache && match) {
 
