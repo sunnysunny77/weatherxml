@@ -57,7 +57,7 @@ const cache = async (req, res) => {
   const cache = await caches.open(cacheName);
   const match = await cache.match(req);
 
-  if (cache && match) {
+  if (match) {
 
     await cache.put(req, res);
   }
