@@ -21,7 +21,10 @@
     "watch-js": "rollup -c ./rollup.config-watch.mjs -w --sourcemap --no-watch.clearScreen",
     "build-js": "rollup -c ./rollup.config-build-production.mjs --sourcemap",
     "production-js": "rollup -c ./rollup.config-build-production.mjs",
-    "watch": "cross-env-shell bash watch.sh",
+    "watch": "run-script-os",
+    "watch:macos": "cross-env-shell bash mac-watch.sh",
+    "watch:win32": "cross-env-shell bash win-watch.sh",
+    "watch:default": "cross-env-shell bash ubuntu-watch.sh",
     "build": "cross-env-shell bash build.sh",
     "production": "cross-env-shell bash production.sh"
   },
