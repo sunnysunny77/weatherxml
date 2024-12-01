@@ -6,9 +6,11 @@ const xml_doc_two = (param) => {
 
     for (let index = 0; index <= 6; index++) {
 
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         let txt_one = "";
         let txt_two = "";
         let date;
+        let day;
 
         for (const obj of param) {
 
@@ -19,7 +21,9 @@ const xml_doc_two = (param) => {
 
                     const text = forecast_period.querySelectorAll("text");
                     date = new Date(forecast_period.getAttribute("start-time-local"));
+                    day = days[date.getDay()];
                     date = date.toLocaleDateString("en-AU", { timeZone: "Australia/Perth" });
+                    console.log(date, day)
                     for (const obj of text) {
 
                         if (obj.getAttribute("type") === "forecast") {
@@ -62,7 +66,7 @@ const xml_doc_two = (param) => {
         }
         txt_array_one.push(txt_one);
         txt_array_two.push(txt_two);
-        date_array.push(date);
+        date_array.push({date: date, day: day});
     }
 
     return [txt_array_one, txt_array_two, date_array];
@@ -113,11 +117,11 @@ const xml_loop = (parm_1, param_2) => {
 
         if (index < 1) {
 
-            document.querySelectorAll(".f")[index].innerHTML = retun_two[2][index];
+            document.querySelectorAll(".f")[index].innerHTML = `<span>${retun_two[2][index].day}</span><br><br><span>${retun_two[2][index].date}</span>`;
             document.querySelectorAll(".z")[index].innerHTML = retun_two[0][index] + retun_two[1][index] + retun_one[index];
         } else if (index >= 1) {
 
-            document.querySelectorAll(".f")[index].innerHTML = retun_two[2][index];
+            document.querySelectorAll(".f")[index].innerHTML = `<span>${retun_two[2][index].day}</span><br><br><span>${retun_two[2][index].date}</span>`;
             document.querySelectorAll(".z")[index].innerHTML = retun_two[0][index] + retun_two[1][index];
         }
     }
