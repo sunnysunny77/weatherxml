@@ -16,46 +16,142 @@ body {
   margin: auto;
 }
 
-section,
-article {
-  padding: 20px;
-}
-
 h1,
 h2 {
   font-weight: 500;
   font-size: 17px;
-}
-
-h1,
-h2 {
-  color: $heading;
+  color: $color_1;
 }
 
 p {
-  color: $p;
+  color: $color_1;
   font-size: $fontsize;
 }
 
-header {
-  padding: $headerBgAspect;
-  background-color: $bg3;
+.sticky {
+  position: sticky;
+  top: 0;
+  @include max_lg {
+    position: relative;
+    top: initial;
+  }
 }
 
-header h1 {
-  color: $heading;
-  padding: 50px;
+.bg1 {
+  background-color: $color_2;
+}
+
+header {
+  background-color: $color_2;
+  h1 {
+    color: $color_1;
+    padding: 50px;
+    @include max_lg {
+      padding: 5%;
+    }
+  }
+}
+
+#flexb {
+  padding: 1.5% 20px 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  align-items: center;
+  justify-content: space-evenly;
+  @include max_lg {
+    flex-direction: column;
+    padding: 5%;
+    justify-content: initial;
+    flex-wrap: initial;
+    align-items: initial;
+  }
+  h2 {
+    align-self: flex-start;
+    padding-top: 26px;
+  }
+  img {
+    width: 200px;
+    margin: 25px;
+    max-width: 250px;
+    min-width: 200px;
+    align-self: center;
+    height: 100%;
+    filter: invert(63%) contrast(188%);
+    @include max_lg {
+      width: 34%;
+      margin: 7% 0;
+    }
+    &:last-of-type {
+      margin: calc(500px / 4) 0;
+      @include max_lg {
+        margin: 7% 0;
+      }
+    }
+  }
+  p {
+    line-height: 2;
+    padding: 20px 2.25% 0 2.25%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+    width: 62%;
+    @include max_lg {
+      padding: 5% 0 5% * 4 0;
+      height: initial;
+      width: initial;
+    }
+    &:last-of-type {
+      align-self: baseline;
+      height: initial;
+      min-height: calc(500px / 2);
+      @include max_lg {
+        align-self: initial;
+        min-height: initial;
+      }
+    }
+    .block {
+      display: block;
+      width: 65%;
+    }
+    .row {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+    }
+  }
+}
+
+#image {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../images/perth.webp);
+  padding: 19.2% 10.8%;
+  position: relative;
+  @include max_lg {
+    background-attachment: initial;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color_2;
+    opacity: 0.2;
+  }
 }
 
 footer {
-  background-image: linear-gradient(to bottom, $bg1, $bg2 100%);
+  background-image: linear-gradient(to bottom, $color_2, $color_3 100%);
   height: 325px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-/* fallback */
 
 #fallback {
   display: flex;
@@ -68,138 +164,31 @@ footer {
   box-sizing: border-box;
   background-color: transparent;
   img {
-      display: block;
-      margin: 0 auto;
+    display: block;
+    margin: 0 auto;
   }
   h1 {
-      text-align: center;
-      font-size: 18px;
-      font-weight: 400;
-      color: $p;
-      margin: 0 0 1rem 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: $color_1;
+    margin: 0 0 1rem 0;
   }
   #go-back {
-      display: block;
-      text-align: center;
-      font-size: 18px;
-      font-weight: 400;
-      border: 1px solid $p;
-      border-radius: 20px;
-      background: transparent;
-      outline: none;
-      color: $p;
-      padding: 1px 6px;
-  }
-}
-
-
-/* main */
-
-.sticky {
-  position: sticky;
-  top: 0;
-}
-
-.bg1 {
-  background-color: $bg1;
-}
-
-#flexb {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  align-items: center;
-  justify-content: space-evenly;
-  padding-top: 1.5%;
-}
-
-#flexb h2 {
-  align-self: flex-start;
-  padding-top: 26px;
-}
-
-#flexb img {
-  width: 200px;
-  height: 100%;
-  align-self: center;
-  margin: $iconmargin;
-  filter: invert(63%) contrast(188%);
-}
-
-#flexb p {
-  height: $stickypheight;
-  line-height: 2;
-  padding: $stickyppadding;
-  width: $stickypwidth;
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-  .block {
     display: block;
-    width: 65%;
-  }
-  .row {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-  }
-}
-
-#sticky {
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-image: $stickyimg;
-  padding: $imageBgAspect;
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: $stickyblendcolor;
-    opacity: 0.2;
-  }
-}
-
-article {
-  background-color: $bg1;
-  color: $p;
-  min-height: 300px;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-article h2 {
-  align-self: flex-start;
-}
-
-@include min_lg {
-  #flexb img:last-of-type {
-    margin: calc($stickypheight / 4) 0;
-  }
-  #flexb p:last-of-type {
-    align-self: baseline;
-    height: unset;
-    min-height: calc($stickypheight / 2);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    border: 1px solid $color_1;
+    border-radius: 20px;
+    background: transparent;
+    outline: none;
+    color: $color_1;
+    padding: 1px 6px;
   }
 }
 
 @include max_lg {
-  header h1 {
-    padding: $paddingmobile;
-  }
-  #flexb {
-    flex-direction: column;
-    padding: $paddingmobile;
-    justify-content: unset;
-    flex-wrap: unset;
-    align-items: unset;
-  }
   #flexb p:nth-child(19) {
     order: 21;
   }
@@ -262,28 +251,5 @@ article h2 {
   }
   #flexb h2:nth-child(2) {
     order: 1;
-  }
-  #flexb img {
-    margin: 7% 0;
-  }
-  #flexb p {
-    width: 100%;
-    padding: $paddingmobile 0 $paddingmobile * 4 0;
-    height: unset;
-  }
-  #flexb img {
-    width: 34%;
-    max-width: 250px;
-    min-width: 200px;
-  }
-  .sticky {
-    position: relative;
-    top: unset;
-  }
-  #sticky {
-    background-attachment: unset;
-  }
-  article {
-    padding: $paddingmobile;
   }
 }

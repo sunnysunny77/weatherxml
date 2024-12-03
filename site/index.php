@@ -50,7 +50,7 @@
         <h2 class="f"></h2>
         <img src="./images/placeholder.webp" width="200" height="200" class="x" />
       </section>
-      <section id="sticky" class="sticky"></section>
+      <div role="img" id="image" class="sticky"></div>
     </main>
     <footer>
       <p><i class="fa-regular fa-copyright" ></i>&nbsp;<?php echo date("Y"); ?></p>
