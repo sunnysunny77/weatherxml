@@ -29,6 +29,7 @@ const xml_doc_two = (param) => {
                         if (obj.getAttribute("type") === "forecast") {
 
                             txt_one += `<span class="block">${  obj.childNodes[0].nodeValue }</span>`;
+
                         }
                     }
                 }
