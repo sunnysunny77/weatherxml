@@ -23,12 +23,13 @@ const xml_doc_two = (param) => {
                     date = new Date(forecast_period.getAttribute("start-time-local"));
                     day = days[date.getDay()];
                     date = date.toLocaleDateString("en-AU", { timeZone: "Australia/Perth" });
-                    console.log(date, day)
+
                     for (const obj of text) {
 
                         if (obj.getAttribute("type") === "forecast") {
 
-                            txt_one += obj.childNodes[0].nodeValue;
+                            txt_one += `<span class="block">${  obj.childNodes[0].nodeValue }</span>`;
+
                         }
                     }
                 }
@@ -40,12 +41,12 @@ const xml_doc_two = (param) => {
                         
                         if (obj.getAttribute("type") === "air_temperature_minimum") {
 
-                          txt_two += `<br>Minimum&nbsp;${  obj.childNodes[0].nodeValue  }&nbsp;°C`;
+                          txt_two += `<span>Minimum<br>${  obj.childNodes[0].nodeValue  }&nbsp;°C</span>`;
 
                         }
                         if (obj.getAttribute("type") === "air_temperature_maximum") {
 
-                           txt_two += `<br>Maximum&nbsp;${  obj.childNodes[0].nodeValue  }&nbsp;°C`;
+                           txt_two += `<span>Maximum<br>${  obj.childNodes[0].nodeValue  }&nbsp;°C</span>`;
 
                         }
                         if (obj.getAttribute("type") === "forecast_icon_code") {
@@ -88,15 +89,7 @@ const xml_doc_one = (param) => {
 
                     if (obj.getAttribute("type") === "air_temperature") {
 
-                        txt += `<br>Current&nbsp;${   obj.childNodes[0].nodeValue  }&nbsp;°C`;
-                    }
-                    if (obj.getAttribute("type") === "maximum_air_temperature") {
-
-                        txt += `<br>Currrent Maximum&nbsp;${   obj.childNodes[0].nodeValue  }&nbsp;°C`;
-                    }
-                    if (obj.getAttribute("type") === "minimum_air_temperature") {
-
-                        txt += `<br>Current Minimum&nbsp;${   obj.childNodes[0].nodeValue  }&nbsp;°C`;
+                        txt += `<br><br><span>${   obj.childNodes[0].nodeValue  }&nbsp;°C</span>`;
                     }
                 }
             }
@@ -112,18 +105,10 @@ const xml_loop = (parm_1, param_2) => {
 
     const retun_two = xml_doc_two(param_2.querySelectorAll("product")[0].querySelectorAll("forecast")[0].querySelectorAll("area"));
     const retun_one = xml_doc_one(parm_1.querySelectorAll("product")[0].querySelectorAll("observations")[0].querySelectorAll("station"));
-
+    document.querySelector(".y").innerHTML = `${retun_one[0]}`;
     for (let index = 0; index <= 6; index++) {
-
-        if (index < 1) {
-
-            document.querySelectorAll(".f")[index].innerHTML = `<span>${retun_two[2][index].day}</span><br><br><span>${retun_two[2][index].date}</span>`;
-            document.querySelectorAll(".z")[index].innerHTML = retun_two[0][index] + retun_two[1][index] + retun_one[index];
-        } else if (index >= 1) {
-
-            document.querySelectorAll(".f")[index].innerHTML = `<span>${retun_two[2][index].day}</span><br><br><span>${retun_two[2][index].date}</span>`;
-            document.querySelectorAll(".z")[index].innerHTML = retun_two[0][index] + retun_two[1][index];
-        }
+        document.querySelectorAll(".f")[index].innerHTML = `<span>${retun_two[2][index].day}</span><br><br><span>${retun_two[2][index].date}</span>`;
+        document.querySelectorAll(".z")[index].innerHTML = `${retun_two[0][index]}<span class="row block">${retun_two[1][index]}</span>`;
     }
 };
 

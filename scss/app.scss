@@ -115,7 +115,7 @@ footer {
 
 #flexb h2 {
   align-self: flex-start;
-  padding-top: 1.5%;
+  padding-top: 26px;
 }
 
 #flexb img {
@@ -132,6 +132,17 @@ footer {
   padding: $stickyppadding;
   width: $stickypwidth;
   text-align: center;
+  display: flex;
+  justify-content: space-around;
+  .block {
+    display: block;
+    width: 65%;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
 }
 
 #sticky {
@@ -253,20 +264,17 @@ article h2 {
     order: 1;
   }
   #flexb img {
-    margin: $paddingmobile 0;
+    margin: 7% 0;
   }
   #flexb p {
     width: 100%;
-    padding: $paddingmobile $paddingmobile $paddingmobile * 4 $paddingmobile;
+    padding: $paddingmobile 0 $paddingmobile * 4 0;
     height: unset;
   }
   #flexb img {
     width: 34%;
     max-width: 250px;
     min-width: 200px;
-  }
-  #flexb p:last-of-type {
-    padding: $paddingmobile;
   }
   .sticky {
     position: relative;

@@ -21,8 +21,9 @@
       <h1>        
         <?php
           date_default_timezone_set("Australia/Perth");
-          echo  date("D g:i a") . " &mdash; Perth";
+          echo  date("g:i a") . " &mdash; Perth";
         ?>
+        <span class="y"></span>
       </h1>
     </header>
     <main>
