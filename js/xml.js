@@ -9,6 +9,7 @@ const xml_doc_two = (param) => {
         const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         let txt_one = "";
         let txt_two = "";
+        let txt_three = "";
         let date;
         let day;
 
@@ -28,7 +29,7 @@ const xml_doc_two = (param) => {
 
                         if (obj.getAttribute("type") === "forecast") {
 
-                            txt_one += `<span class="block">${obj.childNodes[0].nodeValue}</span>`;
+                            txt_one = `<span class="block">${obj.childNodes[0].nodeValue}</span>`;
 
                         }
                     }
@@ -41,14 +42,16 @@ const xml_doc_two = (param) => {
                         
                         if (obj.getAttribute("type") === "air_temperature_minimum") {
 
-                          txt_two += `<span>Min<span>${obj.childNodes[0].nodeValue}°C</span></span>`;
+                            txt_two = `<span>Min<span>${obj.childNodes[0].nodeValue}°C</span></span>`;
 
                         }
+
                         if (obj.getAttribute("type") === "air_temperature_maximum") {
 
-                           txt_two += `<span>Max<span>${obj.childNodes[0].nodeValue}°C</span></span>`;
+                            txt_three = `<span>Max<span>${obj.childNodes[0].nodeValue}°C</span></span>`;
 
                         }
+
                         if (obj.getAttribute("type") === "forecast_icon_code") {
 
                            document.querySelectorAll(".x")[index].src = `./images/${obj.childNodes[0].nodeValue}.webp`;
@@ -66,7 +69,7 @@ const xml_doc_two = (param) => {
             }
         }
         txt_array_one.push(txt_one);
-        txt_array_two.push(txt_two);
+        txt_array_two.push({min: txt_two, max: txt_three});
         date_array.push({date: date, day: day});
     }
 
@@ -81,6 +84,7 @@ const xml_doc_one = (param) => {
 
         let txt_one = "";
         let txt_two = "";
+        let txt_three = "";
         for (const obj of param) {
             
             if (obj.getAttribute("stn-name") === "PERTH METRO" && obj.querySelectorAll("period")[0].querySelectorAll("level")[0].querySelectorAll("element")) {
@@ -90,23 +94,24 @@ const xml_doc_one = (param) => {
 
                     if (obj.getAttribute("type") === "air_temperature") {
 
-                        txt_one += `<div>${obj.childNodes[0].nodeValue}&nbsp;°C</div>`;
-                    }
-
-                    if (obj.getAttribute("type") === "maximum_air_temperature") {
-
-                        txt_two += `<span>Live Max<span>${obj.childNodes[0].nodeValue}°C</span></span>`;
+                        txt_one = `<div>${obj.childNodes[0].nodeValue}&nbsp;°C</div>`;
                     }
 
                     if (obj.getAttribute("type") === "minimum_air_temperature") {
 
-                        txt_two += `<span>Live Min<span>${obj.childNodes[0].nodeValue}°C</span></span>`;
+                        txt_two = `<span>Live Min<span>${obj.childNodes[0].nodeValue}°C</span></span>`;
                     }
+
+                    if (obj.getAttribute("type") === "maximum_air_temperature") {
+
+                        txt_three = `<span>Live Max<span>${obj.childNodes[0].nodeValue}°C</span></span>`;
+                    }
+
                 }
             }
         }
 
-        txtArray.push({live_temp: txt_one, temp: txt_two});
+        txtArray.push({live_temp: txt_one, live_temp_min: txt_two, live_temp_max: txt_three});
     }
 
     return txtArray; 
@@ -124,12 +129,12 @@ const xml_loop = (parm_1, param_2) => {
         if (index === 0) {
 
             document.querySelectorAll(".f")[index].innerHTML = `<span>${retun_two[2][index].day}</span><span>${retun_two[2][index].date}</span>`;
-            document.querySelectorAll(".z")[index].innerHTML = `${retun_two[0][index]}<span class="row block">${retun_two[1][index]}${retun_one[0].temp}</span>`;
+            document.querySelectorAll(".z")[index].innerHTML = `${retun_two[0][index]}<span class="row block">${retun_two[1][index].min}${retun_two[1][index].max}${retun_one[0].live_temp_min}${retun_one[0].live_temp_max}</span>`;
     
         } else {
 
             document.querySelectorAll(".f")[index].innerHTML = `<span>${retun_two[2][index].day}</span><span>${retun_two[2][index].date}</span>`;
-            document.querySelectorAll(".z")[index].innerHTML = `${retun_two[0][index]}<span class="row block">${retun_two[1][index]}</span>`;
+            document.querySelectorAll(".z")[index].innerHTML = `${retun_two[0][index]}<span class="row block">${retun_two[1][index].min}${retun_two[1][index].max}</span>`;
         }
     }
 };
