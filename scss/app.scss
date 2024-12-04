@@ -66,9 +66,16 @@ header {
     flex-wrap: initial;
     align-items: initial;
   }
+  span {
+    display: block;
+  }
   h2 {
     align-self: flex-start;
     padding-top: 26px;
+    height: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   img {
     width: 200px;

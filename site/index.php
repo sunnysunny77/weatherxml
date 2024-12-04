@@ -23,6 +23,8 @@
           date_default_timezone_set("Australia/Perth");
           echo  date("g:i a") . " &mdash; Perth";
         ?>
+        <br>
+        <br>
         <span class="y"></span>
       </h1>
     </header>
