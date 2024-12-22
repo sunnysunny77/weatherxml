@@ -15,7 +15,7 @@
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="images/pwa-logo-small.webp" />
   </head>
-  <body>
+  <body class="before">
     <header>
       <h1>        
         <?php

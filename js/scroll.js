@@ -13,17 +13,12 @@ export const scroll = () => {
 
             if (scrollY > get_position(index) && scrollY < get_position(index) + index.scrollHeight) {   
             
+                body.classList.remove("before");
                 body.classList.add(`before-${i}`);
             } else {
 
-                if(body.classList.contains(`before-${i}`)) {
-                    
-                    body.classList.remove(`before-${i}`);
-                    body.classList.add("before");
-                    return;
-                }
-
                 body.classList.remove(`before-${i}`);
+                body.classList.add("before");
             }
         }
     });

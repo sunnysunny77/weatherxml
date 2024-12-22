@@ -11,10 +11,10 @@
 }
 
 body {
+  background-color: $color_2;
   font-family: $font;
   max-width: 1920px;
   margin: auto;
-  background-color: $color_2;
   position: relative;
   &.before::before {
     content: " ";
@@ -23,17 +23,16 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    animation-name: background-2;
+    animation-name: background-1;
     animation-fill-mode: forwards;
     animation-duration: 1s;
-    z-index: -2;
+    animation-timing-function: ease-in-out;
+    z-index: -1;
     .z {
-      animation-name: background-2;
+      animation-name: background-1;
       animation-fill-mode: forwards;
       animation-duration: 1s;
-    }
-    img {
-      filter: invert(63%);
+      animation-timing-function: ease-in-out;
     }
   }
   &.before-0 {
@@ -44,18 +43,17 @@ body {
       right: 0;
       bottom: 0;
       left: 0;
-      animation-name: background-1;
+      animation-name: background-2;
       animation-fill-mode: forwards;
       animation-duration: 1s;
+      animation-timing-function: ease-in-out;
       z-index: -1;
     }
     .z {
-      animation-name: background-1;
+      animation-name: background-2;
       animation-fill-mode: forwards;
       animation-duration: 1s;
-    }
-    img {
-      filter: contrast(75%);
+      animation-timing-function: ease-in-out;
     }
   }
   &.before-1 {
@@ -66,18 +64,17 @@ body {
       right: 0;
       bottom: 0;
       left: 0;
-      animation-name: background-2;
+      animation-name: background-1;
       animation-fill-mode: forwards;
       animation-duration: 1s;
+      animation-timing-function: ease-in-out;
       z-index: -1;
     }
     .z {
-      animation-name: background-2;
+      animation-name: background-1;
       animation-fill-mode: forwards;
       animation-duration: 1s;
-    }
-    img {
-      filter: invert(63%);
+      animation-timing-function: ease-in-out;
     }
   }
   &.before-2 {
@@ -88,18 +85,17 @@ body {
       right: 0;
       bottom: 0;
       left: 0;
-      animation-name: background-1;
+      animation-name: background-2;
       animation-fill-mode: forwards;
       animation-duration: 1s;
+      animation-timing-function: ease-in-out;
       z-index: -1;
     }
     .z {
-      animation-name: background-1;
+      animation-name: background-2;
       animation-fill-mode: forwards;
       animation-duration: 1s;
-    }
-    img {
-      filter: contrast(75%);
+      animation-timing-function: ease-in-out;
     }
   }
   &.before-3 {
@@ -110,18 +106,17 @@ body {
       right: 0;
       bottom: 0;
       left: 0;
-      animation-name: background-2;
+      animation-name: background-1;
       animation-fill-mode: forwards;
       animation-duration: 1s;
+      animation-timing-function: ease-in-out;
       z-index: -1;
     }
     .z {
-      animation-name: background-2;
+      animation-name: background-1;
       animation-fill-mode: forwards;
       animation-duration: 1s;
-    }
-    img {
-      filter: invert(63%);
+      animation-timing-function: ease-in-out;
     }
   }
   &.before-4 {
@@ -132,18 +127,17 @@ body {
       right: 0;
       bottom: 0;
       left: 0;
-      animation-name: background-1;
+      animation-name: background-2;
       animation-fill-mode: forwards;
       animation-duration: 1s;
+      animation-timing-function: ease-in-out;
       z-index: -1;
     }
     .z {
-      animation-name: background-1;
+      animation-name: background-2;
       animation-fill-mode: forwards;
       animation-duration: 1s;
-    }
-    img {
-      filter: contrast(75%);
+      animation-timing-function: ease-in-out;
     }
   }
   &.before-5 {
@@ -154,18 +148,17 @@ body {
       right: 0;
       bottom: 0;
       left: 0;
-      animation-name: background-2;
+      animation-name: background-1;
       animation-fill-mode: forwards;
       animation-duration: 1s;
+      animation-timing-function: ease-in-out;
       z-index: -1;
     }
     .z {
-      animation-name: background-2;
+      animation-name: background-1;
       animation-fill-mode: forwards;
       animation-duration: 1s;
-    }
-    img {
-      filter: invert(63%);
+      animation-timing-function: ease-in-out;
     }
   }
   &.before-6 {
@@ -176,37 +169,37 @@ body {
       right: 0;
       bottom: 0;
       left: 0;
-      animation-name: background-1;
+      animation-name: background-2;
       animation-fill-mode: forwards;
       animation-duration: 1s;
+      animation-timing-function: ease-in-out;
       z-index: -1;
     }
     .z {
-      animation-name: background-1;
+      animation-name: background-2;
       animation-fill-mode: forwards;
       animation-duration: 1s;
-    }
-    img {
-      filter: contrast(75%);
+      animation-timing-function: ease-in-out;
     }
   }
 }
 
+
 @keyframes background-1 {
   from {
-    background-color: $color_2;
+    background-color: $color_4;
   }
   to {
-    background-color: $color_4;
+    background-color: $color_2;
   }
 }
 
 @keyframes background-2 {
   from {
-    background-color: $color_4;
+    background-color: $color_2;
   }
   to {
-    background-color: $color_2;
+    background-color: $color_4;
   }
 }
 
@@ -220,6 +213,13 @@ header {
     @include max_lg {
       padding: 7.5% 2.5% 0 2.5%;
     }
+  }
+}
+
+.u:last-of-type {
+  padding: 5% 2.25% 5% 2.25%;
+  @include max_lg {
+    padding: 7.5% 1%;
   }
 }
 
@@ -264,7 +264,6 @@ header {
     height: 100%;
     padding: 33px;
     margin: 1% 0 0 0;
-    transition: filter 1s;
     filter: invert(63%);
     @include max_lg {
       width: 34%;
@@ -278,7 +277,7 @@ header {
     display: flex;
     justify-content: space-around;
     width: 62%;
-    min-height: 360px;
+    min-height: 380px;
     font-size: $fontsize;
     @include max_lg {
       width: initial;
@@ -291,13 +290,10 @@ header {
       height: fit-content;
       &.sticky {
         position: sticky;
-        top: 7.5%;
-        bottom: 7.5%;
+        top: 5%;
         @include max_lg {
           position: relative;
           top: initial;
-          top: 7.5%;
-          bottom: initial;
         }
       }
     }
