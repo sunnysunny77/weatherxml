@@ -1,3 +1,4 @@
+
 import { events, get_position } from "./utillites.js";
 
 export const scroll = () => {
@@ -15,8 +16,14 @@ export const scroll = () => {
                 body.classList.add(`before-${i}`);
             } else {
 
+                if(body.classList.contains(`before-${i}`)) {
+                    
+                    body.classList.remove(`before-${i}`);
+                    body.classList.add("before");
+                    return;
+                }
+
                 body.classList.remove(`before-${i}`);
-                body.classList.add("before");
             }
         }
     });

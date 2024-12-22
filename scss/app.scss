@@ -23,7 +23,6 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $color_2;
     animation-name: background-2;
     animation-fill-mode: forwards;
     animation-duration: 1s;
@@ -214,7 +213,7 @@ body {
 header {
   h1 {
     color: $color_1;
-    padding: 50px;
+    padding: 2.5% 2.5% 0 2.5%;
     font-weight: 500;
     font-size: 17px;
     color: $color_1;
@@ -225,7 +224,7 @@ header {
 }
 
 .u {
-  padding: 0 2.25% 5% 2.25%;
+  padding: 6.5% 2.25% 0 2.25%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -279,11 +278,11 @@ header {
     display: flex;
     justify-content: space-around;
     width: 62%;
-    height: 400px;
+    min-height: 300px;
     font-size: $fontsize;
     @include max_lg {
       width: initial;
-      height: initial;
+      min-height: initial;
       order: 3;
     }
     .block {
