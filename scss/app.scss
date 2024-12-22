@@ -224,7 +224,7 @@ header {
 }
 
 .u {
-  padding: 6.5% 2.25% 0 2.25%;
+  padding: 5% 2.25% 0 2.25%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -278,7 +278,7 @@ header {
     display: flex;
     justify-content: space-around;
     width: 62%;
-    min-height: 325px;
+    min-height: 360px;
     font-size: $fontsize;
     @include max_lg {
       width: initial;
@@ -293,13 +293,11 @@ header {
         position: sticky;
         top: 7.5%;
         bottom: 7.5%;
-        padding: 0 0 5% 0;
         @include max_lg {
           position: relative;
           top: initial;
           top: 7.5%;
           bottom: initial;
-          padding: 0;
         }
       }
     }
