@@ -14,113 +14,290 @@ body {
   font-family: $font;
   max-width: 1920px;
   margin: auto;
-}
-
-h1,
-h2 {
-  font-weight: 500;
-  font-size: 17px;
-  color: $color_1;
-}
-
-p {
-  color: $color_1;
-  font-size: $fontsize;
-}
-
-.sticky {
-  position: sticky;
-  top: 0;
-  @include max_lg {
-    position: relative;
-    top: initial;
+  background-color: $color_2;
+  position: relative;
+  &.before::before {
+    content: " ";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color_2;
+    animation-name: background-2;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    z-index: -2;
+    .z {
+      animation-name: background-2;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+    }
+    img {
+      filter: invert(63%);
+    }
   }
-}
-
-.bg1 {
-  background-color: $color_2;
-}
-
-header {
-  background-color: $color_2;
-  h1 {
-    color: $color_1;
-    padding: 50px;
-    @include max_lg {
-      padding: 5%;
+  &.before-0 {
+    &::before {
+      content: " ";
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      animation-name: background-1;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+      z-index: -1;
+    }
+    .z {
+      animation-name: background-1;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+    }
+    img {
+      filter: contrast(75%);
+    }
+  }
+  &.before-1 {
+    &::before {
+      content: " ";
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      animation-name: background-2;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+      z-index: -1;
+    }
+    .z {
+      animation-name: background-2;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+    }
+    img {
+      filter: invert(63%);
+    }
+  }
+  &.before-2 {
+    &::before {
+      content: " ";
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      animation-name: background-1;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+      z-index: -1;
+    }
+    .z {
+      animation-name: background-1;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+    }
+    img {
+      filter: contrast(75%);
+    }
+  }
+  &.before-3 {
+    &::before {
+      content: " ";
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      animation-name: background-2;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+      z-index: -1;
+    }
+    .z {
+      animation-name: background-2;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+    }
+    img {
+      filter: invert(63%);
+    }
+  }
+  &.before-4 {
+    &::before {
+      content: " ";
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      animation-name: background-1;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+      z-index: -1;
+    }
+    .z {
+      animation-name: background-1;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+    }
+    img {
+      filter: contrast(75%);
+    }
+  }
+  &.before-5 {
+    &::before {
+      content: " ";
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      animation-name: background-2;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+      z-index: -1;
+    }
+    .z {
+      animation-name: background-2;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+    }
+    img {
+      filter: invert(63%);
+    }
+  }
+  &.before-6 {
+    &:before {
+      content: " ";
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      animation-name: background-1;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+      z-index: -1;
+    }
+    .z {
+      animation-name: background-1;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+    }
+    img {
+      filter: contrast(75%);
     }
   }
 }
 
-#flexb {
-  padding: 1.5% 20px 20px 20px;
+@keyframes background-1 {
+  from {
+    background-color: $color_2;
+  }
+  to {
+    background-color: $color_4;
+  }
+}
+
+@keyframes background-2 {
+  from {
+    background-color: $color_4;
+  }
+  to {
+    background-color: $color_2;
+  }
+}
+
+header {
+  h1 {
+    color: $color_1;
+    padding: 50px;
+    font-weight: 500;
+    font-size: 17px;
+    color: $color_1;
+    @include max_lg {
+      padding: 7.5% 2.5% 0 2.5%;
+    }
+  }
+}
+
+.u {
+  padding: 0 2.25% 5% 2.25%;
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
-  align-items: center;
   justify-content: space-evenly;
+  color: $color_1;
   @include max_lg {
     flex-direction: column;
-    padding: 5%;
     justify-content: initial;
     flex-wrap: initial;
     align-items: initial;
+    padding: 7.5% 1%;
   }
   span {
     display: block;
   }
   h2 {
     align-self: flex-start;
-    padding-top: 26px;
-    height: 95px;
+    padding-top: 2%;
     display: flex;
+    font-weight: 500;
+    font-size: 17px;
     flex-direction: column;
     justify-content: space-between;
+    @include max_lg {
+      order: 1;
+      margin: 0 0 5% 0;
+      width: 100%;
+      align-items: center;
+    }
+    span {
+      margin: 0 0 2% 0;
+    }
   }
   img {
     width: 200px;
-    margin: 25px;
-    max-width: 250px;
-    min-width: 200px;
-    align-self: center;
+    min-width: 150px;
+    max-width: 200px;
     height: 100%;
-    filter: invert(63%) contrast(188%);
+    padding: 33px;
+    margin: 1% 0 0 0;
+    transition: filter 1s;
+    filter: invert(63%);
     @include max_lg {
       width: 34%;
-      margin: 7% 0;
-    }
-    &:last-of-type {
-      margin: calc(500px / 4) 0;
-      @include max_lg {
-        margin: 7% 0;
-      }
+      order: 2.5;
+      margin: 0 auto 2% 5%;
     }
   }
   p {
     line-height: 2;
-    padding: 20px 2.25% 0 2.25%;
     text-align: center;
     display: flex;
     justify-content: space-around;
-    height: 500px;
     width: 62%;
+    height: 400px;
+    font-size: $fontsize;
     @include max_lg {
-      padding: 5% 0 5% * 4 0;
-      height: initial;
       width: initial;
-    }
-    &:last-of-type {
-      align-self: baseline;
       height: initial;
-      min-height: calc(500px / 2);
-      @include max_lg {
-        align-self: initial;
-        min-height: initial;
-      }
+      order: 3;
     }
     .block {
       display: block;
       width: 65%;
+      height: fit-content;
+      &.sticky {
+        position: sticky;
+        top: 7.5%;
+        @include max_lg {
+          position: relative;
+          top: initial;
+        }
+      }
     }
     .row {
       display: flex;
@@ -147,13 +324,13 @@ header {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $color_2;
+    background-color: transparent;
     opacity: 0.2;
   }
 }
 
 footer {
-  background-image: linear-gradient(to bottom, $color_2, $color_3 100%);
+  background-image: linear-gradient(to bottom, transparent, $color_3 100%);
   height: 325px;
   display: flex;
   justify-content: center;
@@ -192,71 +369,5 @@ footer {
     outline: none;
     color: $color_1;
     padding: 1px 6px;
-  }
-}
-
-@include max_lg {
-  #flexb p:nth-child(19) {
-    order: 21;
-  }
-  #flexb img:nth-child(21) {
-    order: 20;
-  }
-  #flexb h2:nth-child(20) {
-    order: 19;
-  }
-  #flexb p:nth-child(16) {
-    order: 18;
-  }
-  #flexb img:nth-child(18) {
-    order: 17;
-  }
-  #flexb h2:nth-child(17) {
-    order: 16;
-  }
-  #flexb p:nth-child(13) {
-    order: 15;
-  }
-  #flexb img:nth-child(15) {
-    order: 14;
-  }
-  #flexb h2:nth-child(14) {
-    order: 13;
-  }
-  #flexb p:nth-child(10) {
-    order: 12;
-  }
-  #flexb img:nth-child(12) {
-    order: 11;
-  }
-  #flexb h2:nth-child(11) {
-    order: 10;
-  }
-  #flexb p:nth-child(7) {
-    order: 9;
-  }
-  #flexb img:nth-child(9) {
-    order: 8;
-  }
-  #flexb h2:nth-child(8) {
-    order: 7;
-  }
-  #flexb p:nth-child(4) {
-    order: 6;
-  }
-  #flexb img:nth-child(6) {
-    order: 5;
-  }
-  #flexb h2:nth-child(5) {
-    order: 4;
-  }
-  #flexb p:nth-child(1) {
-    order: 3;
-  }
-  #flexb img:nth-child(3) {
-    order: 2;
-  }
-  #flexb h2:nth-child(2) {
-    order: 1;
   }
 }

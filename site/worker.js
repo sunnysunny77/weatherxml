@@ -29,7 +29,7 @@ const resources = [
   "./images/18.webp",
   "./images/19.webp",
   "./images/placeholder.webp",
-  "./images/sticky.webp",
+  "./images/perth.webp",
   "./images/pwa-logo-small.webp",
   "./images/pwa-logo.webp",
   "./IDW12300.xml",

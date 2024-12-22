@@ -15,7 +15,6 @@
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="images/pwa-logo-small.webp" />
   </head>
-
   <body>
     <header>
       <h1>        
@@ -29,30 +28,44 @@
       </h1>
     </header>
     <main>
-      <section id="flexb" class="bg1">
-        <p class="z sticky bg1"></p>
-        <h2 class="f"></h2>
-        <img src="./images/placeholder.webp" width="200" height="200" class="x" />
-        <p class="z sticky bg1"></p>
-        <h2 class="f"></h2>
-        <img src="./images/placeholder.webp" width="200" height="200" class="x" />
-        <p class="z sticky bg1"></p>
-        <h2 class="f"></h2>
-        <img src="./images/placeholder.webp" width="200" height="200" class="x" />
-        <p class="z sticky bg1"></p>
-        <h2 class="f"></h2>
-        <img src="./images/placeholder.webp" width="200" height="200" class="x" />
-        <p class="z sticky bg1"></p>
-        <h2 class="f"></h2>
-        <img src="./images/placeholder.webp" width="200" height="200" class="x" />
-        <p class="z sticky bg1"></p>
-        <h2 class="f"></h2>
-        <img src="./images/placeholder.webp" width="200" height="200" class="x" />
-        <p class="z sticky bg1"></p>
-        <h2 class="f"></h2>
-        <img src="./images/placeholder.webp" width="200" height="200" class="x" />
+      <section>
+        <div class="u"> 
+          <p class="z"></p>
+          <h2 class="f"></h2>
+          <img src="./images/placeholder.webp" width="200" height="200" class="x" />
+        </div> 
+        <div class="u"> 
+          <p class="z"></p>
+          <h2 class="f"></h2>
+          <img src="./images/placeholder.webp" width="200" height="200" class="x" />
+        </div> 
+        <div class="u"> 
+          <p class="z"></p>
+          <h2 class="f"></h2>
+          <img src="./images/placeholder.webp" width="200" height="200" class="x" />
+        </div> 
+        <div class="u"> 
+          <p class="z"></p>
+          <h2 class="f"></h2>
+          <img src="./images/placeholder.webp" width="200" height="200" class="x" />
+        </div> 
+        <div class="u"> 
+          <p class="z"></p>
+          <h2 class="f"></h2>
+          <img src="./images/placeholder.webp" width="200" height="200" class="x" />
+        </div> 
+        <div class="u"> 
+          <p class="z"></p>
+          <h2 class="f"></h2>
+          <img src="./images/placeholder.webp" width="200" height="200" class="x" />
+        </div> 
+        <div class="u"> 
+          <p class="z"></p>
+          <h2 class="f"></h2>
+          <img src="./images/placeholder.webp" width="200" height="200" class="x" />
+        </div> 
       </section>
-      <div role="img" id="image" class="sticky"></div>
+      <div role="img" id="image"></div>
     </main>
     <footer>
       <p><i class="fa-regular fa-copyright" ></i>&nbsp;<?php echo date("Y"); ?></p>
