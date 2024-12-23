@@ -24,7 +24,7 @@
         ?>
         <br>
         <br>
-        <span class="y"></span>
+        <span class="y">Loading...</span>
       </h1>
     </header>
     <main>
