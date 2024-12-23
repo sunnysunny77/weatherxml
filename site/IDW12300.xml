@@ -9,14 +9,14 @@
             <disclaimer>http://www.bom.gov.au/other/disclaimer.shtml</disclaimer>
         </source>
         <identifier>IDW12300</identifier>
-        <issue-time-utc>2024-12-22T08:20:00Z</issue-time-utc>
-        <issue-time-local tz="WST">2024-12-22T16:20:00+08:00</issue-time-local>
-        <sent-time>2024-12-22T08:20:06Z</sent-time>
-        <expiry-time>2024-12-23T08:20:00Z</expiry-time>
-        <validity-bgn-time-local tz="WST">2024-12-22T16:20:06+08:00</validity-bgn-time-local>
+        <issue-time-utc>2024-12-22T20:40:00Z</issue-time-utc>
+        <issue-time-local tz="WST">2024-12-23T04:40:00+08:00</issue-time-local>
+        <sent-time>2024-12-22T20:40:06Z</sent-time>
+        <expiry-time>2024-12-23T20:40:00Z</expiry-time>
+        <validity-bgn-time-local tz="WST">2024-12-23T00:00:00+08:00</validity-bgn-time-local>
         <validity-end-time-local tz="WST">2024-12-29T23:59:59+08:00</validity-end-time-local>
-        <next-routine-issue-time-utc>2024-12-22T20:40:00Z</next-routine-issue-time-utc>
-        <next-routine-issue-time-local tz="WST">2024-12-23T04:40:00+08:00</next-routine-issue-time-local>
+        <next-routine-issue-time-utc>2024-12-23T08:20:00Z</next-routine-issue-time-utc>
+        <next-routine-issue-time-local tz="WST">2024-12-23T16:20:00+08:00</next-routine-issue-time-local>
         <status>O</status>
         <service>WSP</service>
         <sub-service>FCT</sub-service>
@@ -25,23 +25,20 @@
     </amoc>
     <forecast>
         <area aac="WA_FA001" description="Western Australia" type="region">
-            <forecast-period start-time-local="2024-12-22T16:20:06+08:00" end-time-local="2024-12-22T16:20:06+08:00" start-time-utc="2024-12-22T08:20:06Z" end-time-utc="2024-12-22T08:20:06Z">
+            <forecast-period start-time-local="2024-12-23T04:40:06+08:00" end-time-local="2024-12-23T04:40:06+08:00" start-time-utc="2024-12-22T20:40:06Z" end-time-utc="2024-12-22T20:40:06Z">
                 <text type="warning_summary_footer">For latest warnings go to www.bom.gov.au, subscribe to RSS feeds, call 1300 659 210* or listen for warnings on relevant TV and radio broadcasts.</text>
                 <text type="product_footer">* Calls to 1300 numbers cost around 27.5c incl. GST, higher from mobiles or public phones.</text>
             </forecast-period>
         </area>
         <area aac="WA_PW009" description="Lower West" type="public-district" parent-aac="WA_FA001">
-            <warning-summary type="fire_weather_warning" start-time-local="2024-12-23T00:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T16:00:00Z" end-time-utc="2024-12-23T16:00:00Z">Fire Weather Warning for the Swan Inland North and Swan Inland South fire weather districts for Monday</warning-summary>
+            <warning-summary type="fire_weather_warning" start-time-local="2024-12-23T02:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T18:00:00Z" end-time-utc="2024-12-23T16:00:00Z">Fire Weather Warning for the Swan Inland North and Swan Inland South fire weather districts for Monday</warning-summary>
         </area>
         <area aac="WA_MW009" description="Perth Coast: Two Rocks to Dawesville" type="coast" parent-aac="WA_FA001">
-            <warning-summary type="marine_forecast" start-time-local="2024-12-22T17:00:00+08:00" end-time-local="2024-12-27T00:00:00+08:00" start-time-utc="2024-12-22T09:00:00Z" end-time-utc="2024-12-26T16:00:00Z">Strong Wind Warning for Monday for Perth Coast</warning-summary>
+            <warning-summary type="marine_forecast" start-time-local="2024-12-23T05:00:00+08:00" end-time-local="2024-12-25T00:00:00+08:00" start-time-utc="2024-12-22T21:00:00Z" end-time-utc="2024-12-24T16:00:00Z">Strong Wind Warning for Monday and Tuesday for Perth Coast</warning-summary>
         </area>
         <area aac="WA_ME001" description="Perth" type="metropolitan" parent-aac="WA_FA001">
-            <forecast-period index="0" start-time-local="2024-12-22T17:00:00+08:00" end-time-local="2024-12-23T00:00:00+08:00" start-time-utc="2024-12-22T09:00:00Z" end-time-utc="2024-12-22T16:00:00Z">
-                <text type="forecast">Sunny. Winds easterly 15 to 25 km/h inland turning south to southwesterly 20 to 30 km/h near the coast, then tending east to southeasterly 15 to 25 km/h throughout in the late evening.</text>
-            </forecast-period>
-            <forecast-period index="1" start-time-local="2024-12-23T00:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T16:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
-                <text type="forecast">Sunny. The chance of a thunderstorm with little or no rainfall about the hills in the afternoon and early evening. Winds east to northeasterly 25 to 35 km/h tending north to northeasterly 20 to 30 km/h in the morning then shifting southwesterly in the middle of the day. Gusts up to 60 km/h about the hills and foothills in the morning.</text>
+            <forecast-period index="0" start-time-local="2024-12-23T00:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T16:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
+                <text type="forecast">Sunny. The chance of a thunderstorm with little or no rainfall about the hills in the afternoon and early evening. Winds northeasterly 25 to 35 km/h shifting southwesterly 20 to 30 km/h in the middle of the day. Gusts up to 60 km/h about the hills and foothills in the morning.</text>
                 <text type="fire_danger">
                     <p>Swan Coastal North: High</p>
                     <p>Swan Inland North: Extreme</p>
@@ -50,74 +47,68 @@
                 </text>
                 <text type="uv_alert">Sun protection 8:00am to 4:30pm, UV Index predicted to reach 12 [Extreme]</text>
             </forecast-period>
-            <forecast-period index="2" start-time-local="2024-12-24T00:00:00+08:00" end-time-local="2024-12-25T00:00:00+08:00" start-time-utc="2024-12-23T16:00:00Z" end-time-utc="2024-12-24T16:00:00Z">
+            <forecast-period index="1" start-time-local="2024-12-24T00:00:00+08:00" end-time-local="2024-12-25T00:00:00+08:00" start-time-utc="2024-12-23T16:00:00Z" end-time-utc="2024-12-24T16:00:00Z">
                 <text type="forecast">Sunny. Winds south to southwesterly 25 to 40 km/h.</text>
             </forecast-period>
-            <forecast-period index="3" start-time-local="2024-12-25T00:00:00+08:00" end-time-local="2024-12-26T00:00:00+08:00" start-time-utc="2024-12-24T16:00:00Z" end-time-utc="2024-12-25T16:00:00Z">
+            <forecast-period index="2" start-time-local="2024-12-25T00:00:00+08:00" end-time-local="2024-12-26T00:00:00+08:00" start-time-utc="2024-12-24T16:00:00Z" end-time-utc="2024-12-25T16:00:00Z">
                 <text type="forecast">Mostly sunny. Winds south to southwesterly 30 to 45 km/h.</text>
             </forecast-period>
-            <forecast-period index="4" start-time-local="2024-12-26T00:00:00+08:00" end-time-local="2024-12-27T00:00:00+08:00" start-time-utc="2024-12-25T16:00:00Z" end-time-utc="2024-12-26T16:00:00Z">
+            <forecast-period index="3" start-time-local="2024-12-26T00:00:00+08:00" end-time-local="2024-12-27T00:00:00+08:00" start-time-utc="2024-12-25T16:00:00Z" end-time-utc="2024-12-26T16:00:00Z">
                 <text type="forecast">Sunny. Winds southerly 25 to 40 km/h.</text>
             </forecast-period>
-            <forecast-period index="5" start-time-local="2024-12-27T00:00:00+08:00" end-time-local="2024-12-28T00:00:00+08:00" start-time-utc="2024-12-26T16:00:00Z" end-time-utc="2024-12-27T16:00:00Z">
+            <forecast-period index="4" start-time-local="2024-12-27T00:00:00+08:00" end-time-local="2024-12-28T00:00:00+08:00" start-time-utc="2024-12-26T16:00:00Z" end-time-utc="2024-12-27T16:00:00Z">
                 <text type="forecast">Mostly sunny. Winds southeasterly 15 to 20 km/h turning south to southwesterly 20 to 30 km/h during the morning.</text>
             </forecast-period>
-            <forecast-period index="6" start-time-local="2024-12-28T00:00:00+08:00" end-time-local="2024-12-29T00:00:00+08:00" start-time-utc="2024-12-27T16:00:00Z" end-time-utc="2024-12-28T16:00:00Z">
+            <forecast-period index="5" start-time-local="2024-12-28T00:00:00+08:00" end-time-local="2024-12-29T00:00:00+08:00" start-time-utc="2024-12-27T16:00:00Z" end-time-utc="2024-12-28T16:00:00Z">
                 <text type="forecast">Mostly sunny. Winds east to southeasterly 15 to 20 km/h tending southeast to southwesterly 20 to 30 km/h during the day.</text>
             </forecast-period>
-            <forecast-period index="7" start-time-local="2024-12-29T00:00:00+08:00" end-time-local="2024-12-30T00:00:00+08:00" start-time-utc="2024-12-28T16:00:00Z" end-time-utc="2024-12-29T16:00:00Z">
+            <forecast-period index="6" start-time-local="2024-12-29T00:00:00+08:00" end-time-local="2024-12-30T00:00:00+08:00" start-time-utc="2024-12-28T16:00:00Z" end-time-utc="2024-12-29T16:00:00Z">
                 <text type="forecast">Sunny. Winds southeasterly 15 to 20 km/h turning southwesterly 25 to 35 km/h during the day.</text>
             </forecast-period>
         </area>
         <area aac="WA_PT053" description="Perth" type="location" parent-aac="WA_ME001">
-            <forecast-period index="0" start-time-local="2024-12-22T17:00:00+08:00" end-time-local="2024-12-23T00:00:00+08:00" start-time-utc="2024-12-22T09:00:00Z" end-time-utc="2024-12-22T16:00:00Z">
-                <element type="forecast_icon_code">2</element>
-                <text type="precis">Clear.</text>
-                <text type="probability_of_precipitation">0%</text>
-            </forecast-period>
-            <forecast-period index="1" start-time-local="2024-12-23T00:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T16:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
+            <forecast-period index="0" start-time-local="2024-12-23T05:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T21:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
                 <element type="forecast_icon_code">1</element>
-                <element type="air_temperature_minimum" units="Celsius">27</element>
-                <element type="air_temperature_maximum" units="Celsius">40</element>
+                <element type="air_temperature_maximum" units="Celsius">41</element>
                 <text type="precis">Sunny.</text>
                 <text type="probability_of_precipitation">5%</text>
             </forecast-period>
-            <forecast-period index="2" start-time-local="2024-12-24T00:00:00+08:00" end-time-local="2024-12-25T00:00:00+08:00" start-time-utc="2024-12-23T16:00:00Z" end-time-utc="2024-12-24T16:00:00Z">
+            <forecast-period index="1" start-time-local="2024-12-24T00:00:00+08:00" end-time-local="2024-12-25T00:00:00+08:00" start-time-utc="2024-12-23T16:00:00Z" end-time-utc="2024-12-24T16:00:00Z">
                 <element type="forecast_icon_code">1</element>
                 <element type="air_temperature_minimum" units="Celsius">20</element>
                 <element type="air_temperature_maximum" units="Celsius">31</element>
                 <text type="precis">Sunny.</text>
                 <text type="probability_of_precipitation">5%</text>
             </forecast-period>
-            <forecast-period index="3" start-time-local="2024-12-25T00:00:00+08:00" end-time-local="2024-12-26T00:00:00+08:00" start-time-utc="2024-12-24T16:00:00Z" end-time-utc="2024-12-25T16:00:00Z">
+            <forecast-period index="2" start-time-local="2024-12-25T00:00:00+08:00" end-time-local="2024-12-26T00:00:00+08:00" start-time-utc="2024-12-24T16:00:00Z" end-time-utc="2024-12-25T16:00:00Z">
                 <element type="forecast_icon_code">9</element>
                 <element type="air_temperature_minimum" units="Celsius">15</element>
                 <element type="air_temperature_maximum" units="Celsius">24</element>
                 <text type="precis">Becoming windy. Mostly sunny.</text>
                 <text type="probability_of_precipitation">5%</text>
             </forecast-period>
-            <forecast-period index="4" start-time-local="2024-12-26T00:00:00+08:00" end-time-local="2024-12-27T00:00:00+08:00" start-time-utc="2024-12-25T16:00:00Z" end-time-utc="2024-12-26T16:00:00Z">
+            <forecast-period index="3" start-time-local="2024-12-26T00:00:00+08:00" end-time-local="2024-12-27T00:00:00+08:00" start-time-utc="2024-12-25T16:00:00Z" end-time-utc="2024-12-26T16:00:00Z">
                 <element type="forecast_icon_code">1</element>
                 <element type="air_temperature_minimum" units="Celsius">12</element>
                 <element type="air_temperature_maximum" units="Celsius">25</element>
                 <text type="precis">Sunny.</text>
                 <text type="probability_of_precipitation">5%</text>
             </forecast-period>
-            <forecast-period index="5" start-time-local="2024-12-27T00:00:00+08:00" end-time-local="2024-12-28T00:00:00+08:00" start-time-utc="2024-12-26T16:00:00Z" end-time-utc="2024-12-27T16:00:00Z">
+            <forecast-period index="4" start-time-local="2024-12-27T00:00:00+08:00" end-time-local="2024-12-28T00:00:00+08:00" start-time-utc="2024-12-26T16:00:00Z" end-time-utc="2024-12-27T16:00:00Z">
                 <element type="forecast_icon_code">3</element>
                 <element type="air_temperature_minimum" units="Celsius">14</element>
                 <element type="air_temperature_maximum" units="Celsius">26</element>
                 <text type="precis">Mostly sunny.</text>
                 <text type="probability_of_precipitation">0%</text>
             </forecast-period>
-            <forecast-period index="6" start-time-local="2024-12-28T00:00:00+08:00" end-time-local="2024-12-29T00:00:00+08:00" start-time-utc="2024-12-27T16:00:00Z" end-time-utc="2024-12-28T16:00:00Z">
+            <forecast-period index="5" start-time-local="2024-12-28T00:00:00+08:00" end-time-local="2024-12-29T00:00:00+08:00" start-time-utc="2024-12-27T16:00:00Z" end-time-utc="2024-12-28T16:00:00Z">
                 <element type="forecast_icon_code">3</element>
                 <element type="air_temperature_minimum" units="Celsius">16</element>
                 <element type="air_temperature_maximum" units="Celsius">31</element>
                 <text type="precis">Mostly sunny.</text>
                 <text type="probability_of_precipitation">0%</text>
             </forecast-period>
-            <forecast-period index="7" start-time-local="2024-12-29T00:00:00+08:00" end-time-local="2024-12-30T00:00:00+08:00" start-time-utc="2024-12-28T16:00:00Z" end-time-utc="2024-12-29T16:00:00Z">
+            <forecast-period index="6" start-time-local="2024-12-29T00:00:00+08:00" end-time-local="2024-12-30T00:00:00+08:00" start-time-utc="2024-12-28T16:00:00Z" end-time-utc="2024-12-29T16:00:00Z">
                 <element type="forecast_icon_code">1</element>
                 <element type="air_temperature_minimum" units="Celsius">19</element>
                 <element type="air_temperature_maximum" units="Celsius">34</element>
@@ -126,63 +117,53 @@
             </forecast-period>
         </area>
         <area aac="WA_PT030" description="Joondalup" type="location" parent-aac="WA_ME001">
-            <forecast-period index="1" start-time-local="2024-12-23T00:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T16:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
-                <element type="air_temperature_minimum" units="Celsius">27</element>
-                <element type="air_temperature_maximum" units="Celsius">38</element>
+            <forecast-period index="0" start-time-local="2024-12-23T05:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T21:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
+                <element type="air_temperature_maximum" units="Celsius">40</element>
             </forecast-period>
         </area>
         <area aac="WA_PT058" description="Scarborough" type="location" parent-aac="WA_ME001">
-            <forecast-period index="1" start-time-local="2024-12-23T00:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T16:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
-                <element type="air_temperature_minimum" units="Celsius">26</element>
-                <element type="air_temperature_maximum" units="Celsius">38</element>
+            <forecast-period index="0" start-time-local="2024-12-23T05:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T21:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
+                <element type="air_temperature_maximum" units="Celsius">39</element>
             </forecast-period>
         </area>
         <area aac="WA_PT028" description="Fremantle" type="location" parent-aac="WA_ME001">
-            <forecast-period index="1" start-time-local="2024-12-23T00:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T16:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
-                <element type="air_temperature_minimum" units="Celsius">26</element>
-                <element type="air_temperature_maximum" units="Celsius">38</element>
+            <forecast-period index="0" start-time-local="2024-12-23T05:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T21:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
+                <element type="air_temperature_maximum" units="Celsius">39</element>
             </forecast-period>
         </area>
         <area aac="WA_PT055" description="Rockingham" type="location" parent-aac="WA_ME001">
-            <forecast-period index="1" start-time-local="2024-12-23T00:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T16:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
-                <element type="air_temperature_minimum" units="Celsius">26</element>
-                <element type="air_temperature_maximum" units="Celsius">35</element>
+            <forecast-period index="0" start-time-local="2024-12-23T05:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T21:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
+                <element type="air_temperature_maximum" units="Celsius">37</element>
             </forecast-period>
         </area>
         <area aac="WA_PT044" description="Midland" type="location" parent-aac="WA_ME001">
-            <forecast-period index="1" start-time-local="2024-12-23T00:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T16:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
-                <element type="air_temperature_minimum" units="Celsius">27</element>
+            <forecast-period index="0" start-time-local="2024-12-23T05:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T21:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
                 <element type="air_temperature_maximum" units="Celsius">44</element>
             </forecast-period>
         </area>
         <area aac="WA_PT032" description="Kalamunda" type="location" parent-aac="WA_ME001">
-            <forecast-period index="1" start-time-local="2024-12-23T00:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T16:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
-                <element type="air_temperature_minimum" units="Celsius">26</element>
+            <forecast-period index="0" start-time-local="2024-12-23T05:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T21:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
                 <element type="air_temperature_maximum" units="Celsius">42</element>
             </forecast-period>
         </area>
         <area aac="WA_PT017" description="Armadale" type="location" parent-aac="WA_ME001">
-            <forecast-period index="1" start-time-local="2024-12-23T00:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T16:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
-                <element type="air_temperature_minimum" units="Celsius">26</element>
+            <forecast-period index="0" start-time-local="2024-12-23T05:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T21:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
                 <element type="air_temperature_maximum" units="Celsius">43</element>
             </forecast-period>
         </area>
         <area aac="WA_PT060" description="Swanbourne" type="location" parent-aac="WA_ME001">
-            <forecast-period index="1" start-time-local="2024-12-23T00:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T16:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
-                <element type="air_temperature_minimum" units="Celsius">26</element>
-                <element type="air_temperature_maximum" units="Celsius">38</element>
+            <forecast-period index="0" start-time-local="2024-12-23T05:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T21:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
+                <element type="air_temperature_maximum" units="Celsius">39</element>
             </forecast-period>
         </area>
         <area aac="WA_PT057" description="Rottnest Island" type="location" parent-aac="WA_ME001">
-            <forecast-period index="1" start-time-local="2024-12-23T00:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T16:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
-                <element type="air_temperature_minimum" units="Celsius">23</element>
+            <forecast-period index="0" start-time-local="2024-12-23T05:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T21:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
                 <element type="air_temperature_maximum" units="Celsius">31</element>
             </forecast-period>
         </area>
         <area aac="WA_PT012" description="Mandurah" type="location" parent-aac="WA_ME001">
-            <forecast-period index="1" start-time-local="2024-12-23T00:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T16:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
-                <element type="air_temperature_minimum" units="Celsius">26</element>
-                <element type="air_temperature_maximum" units="Celsius">35</element>
+            <forecast-period index="0" start-time-local="2024-12-23T05:00:00+08:00" end-time-local="2024-12-24T00:00:00+08:00" start-time-utc="2024-12-22T21:00:00Z" end-time-utc="2024-12-23T16:00:00Z">
+                <element type="air_temperature_maximum" units="Celsius">37</element>
             </forecast-period>
         </area>
     </forecast>

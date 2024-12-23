@@ -15,7 +15,7 @@
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="images/pwa-logo-small.webp" />
   </head>
-  <body class="before">
+  <body>
     <header>
       <h1>        
         <?php
@@ -65,8 +65,8 @@
           <img src="./images/placeholder.webp" width="200" height="200" class="x" />
         </div> 
       </section>
-      <div role="img" id="image"></div>
     </main>
+    <div role="img" id="image"></div>
     <footer>
       <p><i class="fa-regular fa-copyright" ></i>&nbsp;<?php echo date("Y"); ?></p>
     </footer>
