@@ -16,28 +16,15 @@ body {
   max-width: 1920px;
   margin: auto;
   position: relative;
-  &.before-0,
-  &.before-2,
-  &.before-4,
-  &.before-6 {
-    &::before {
-      content: " ";
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      animation-name: background-2;
-      animation-fill-mode: forwards;
-      animation-duration: 1s;
-      animation-timing-function: ease-in-out;
-      z-index: -1;
-    }
-  }
   &.before-start,
+  &.before-0,
   &.before-1,
+  &.before-2,
   &.before-3,
-  &.before-5 {
+  &.before-4,
+  &.before-5,
+  &.before-6, 
+  &.before-end {
     &::before {
       content: " ";
       position: fixed;
@@ -45,25 +32,38 @@ body {
       right: 0;
       bottom: 0;
       left: 0;
-      animation-name: background-1;
       animation-fill-mode: forwards;
       animation-duration: 1s;
       animation-timing-function: ease-in-out;
       z-index: -1;
     }
   }
+  &.before-start::before,
+  &.before-1::before,
+  &.before-3::before,
+  &.before-5::before {
+
+    animation-name: even;
+  }
+  &.before-0::before,
+  &.before-2::before,
+  &.before-4::before, 
+  &.before-6::before{
+    animation-name: odd;
+  }
+
 }
 
-@keyframes background-1 {
+@keyframes even {
   from {
-    background-color: $color_4;
+    background-color: $color_4
   }
   to {
     background-color: $color_2;
   }
 }
 
-@keyframes background-2 {
+@keyframes odd {
   from {
     background-color: $color_2;
   }
