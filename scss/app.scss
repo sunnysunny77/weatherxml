@@ -23,7 +23,7 @@ body {
   &.before-3,
   &.before-4,
   &.before-5,
-  &.before-6, 
+  &.before-6,
   &.before-end {
     &::before {
       content: " ";
@@ -42,21 +42,19 @@ body {
   &.before-1::before,
   &.before-3::before,
   &.before-5::before {
-
     animation-name: even;
   }
   &.before-0::before,
   &.before-2::before,
-  &.before-4::before, 
-  &.before-6::before{
+  &.before-4::before,
+  &.before-6::before {
     animation-name: odd;
   }
-
 }
 
 @keyframes even {
   from {
-    background-color: $color_4
+    background-color: $color_4;
   }
   to {
     background-color: $color_2;
