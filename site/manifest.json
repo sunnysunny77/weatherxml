@@ -2,8 +2,8 @@
     "name": "Weather",
     "short_name": "Weather",
     "start_url": "/",
-    "background_color": "#46B1C9",
-    "theme_color": "#46B1C9",
+    "background_color": "#E5E5FF",
+    "theme_color": "#E5E5FF",
     "display": "standalone",
     "icons": [       
         {
