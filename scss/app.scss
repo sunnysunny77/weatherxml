@@ -341,10 +341,11 @@ header {
   background-size: cover;
   background-position: center;
   background-image: url(../images/perth.webp);
-  padding: 19.2% 10.8%;
+  aspect-ratio: 2.5 / 1;
   position: relative;
   @include max_lg {
     background-attachment: initial;
+    aspect-ratio: 16 / 9;
   }
   &::after {
     content: "";
