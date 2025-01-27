@@ -32,37 +32,37 @@
         <div class="u"> 
           <p class="z"></p>
           <h2 class="f"></h2>
-          <img src="./images/placeholder.webp" width="200" height="200" class="x" />
+          <img alt="day-1" src="./images/placeholder.webp" width="200" height="200" class="x" />
         </div> 
         <div class="u"> 
           <p class="z"></p>
           <h2 class="f"></h2>
-          <img src="./images/placeholder.webp" width="200" height="200" class="x" />
+          <img alt="day-2" src="./images/placeholder.webp" width="200" height="200" class="x" />
         </div> 
         <div class="u"> 
           <p class="z"></p>
           <h2 class="f"></h2>
-          <img src="./images/placeholder.webp" width="200" height="200" class="x" />
+          <img alt="day-3" src="./images/placeholder.webp" width="200" height="200" class="x" />
         </div> 
         <div class="u"> 
           <p class="z"></p>
           <h2 class="f"></h2>
-          <img src="./images/placeholder.webp" width="200" height="200" class="x" />
+          <img alt="day-4" src="./images/placeholder.webp" width="200" height="200" class="x" />
         </div> 
         <div class="u"> 
           <p class="z"></p>
           <h2 class="f"></h2>
-          <img src="./images/placeholder.webp" width="200" height="200" class="x" />
+          <img alt="day-5" src="./images/placeholder.webp" width="200" height="200" class="x" />
         </div> 
         <div class="u"> 
           <p class="z"></p>
           <h2 class="f"></h2>
-          <img src="./images/placeholder.webp" width="200" height="200" class="x" />
+          <img alt="day-6" src="./images/placeholder.webp" width="200" height="200" class="x" />
         </div> 
         <div class="u"> 
           <p class="z"></p>
           <h2 class="f"></h2>
-          <img src="./images/placeholder.webp" width="200" height="200" class="x" />
+          <img alt="day-7" src="./images/placeholder.webp" width="200" height="200" class="x" />
         </div> 
       </section>
     </main>
