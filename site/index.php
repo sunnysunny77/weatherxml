@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-overlayscrollbars-initialize>
   <head>
     <?php
       require_once "./ftp.php";
@@ -15,7 +15,7 @@
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="images/pwa-logo-small.webp" />
   </head>
-  <body>
+  <body data-overlayscrollbars-initialize>
     <header>
       <h1>        
         <?php

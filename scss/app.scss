@@ -3,12 +3,30 @@
 @import "./partials/breakpoints";
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
 @import "@fortawesome/fontawesome-free/scss/regular";
+@import "overlayscrollbars/styles/overlayscrollbars.min";
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+// scrollbar
+
+.os-theme-body {
+  --os-size: 7px;
+}
+
+.os-theme-body .os-scrollbar-handle {
+  background: $color_1;
+  border-radius: 0px;
+  height: 85px;
+}
+
+.os-theme-body .os-scrollbar-track {
+  background: transparent;
+}
+
 
 body {
   background-color: $Blue;

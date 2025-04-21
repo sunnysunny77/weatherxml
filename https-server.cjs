@@ -28,7 +28,7 @@ app.use((req, res) => {
         "Strict-Transport-Security": "max-age=63072000; includeSubdomains; preload",
         "Referrer-Policy": "no-referrer",
         "Cache-Control": "no-cache",
-        "Content-Security-Policy": `default-src 'none'; script-src 'self' https://${process.env.CN}:2999/; connect-src 'self' https://${process.env.CN}:2999/livereload.js wss://${process.env.CN}:2999/livereload; style-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; manifest-src 'self';`,
+        "Content-Security-Policy": `default-src 'none'; script-src 'self' https://${process.env.CN}:2999/; connect-src 'self' https://${process.env.CN}:2999/livereload.js wss://${process.env.CN}:2999/livereload; style-src 'self' 'sha256-qGGsB/QprN05ZQ2phcOyUL0AHJIhdCmMjFRzU/ejcik='; img-src 'self' data:; media-src 'self'; font-src 'self'; manifest-src 'self';`,
     });
 });
 

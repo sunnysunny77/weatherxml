@@ -15,10 +15,12 @@ import { events } from "./utillites.js";
 import { run_fetch } from "./xml.js";
 import { scroll } from "./scroll.js";
 import { fallback } from "./fallback.js";
+import { init } from "./init.js";
 
 events(window, "load", () =>{
   
  fallback();
+ init();
  service_worker(); 
  run_fetch();
  scroll();
