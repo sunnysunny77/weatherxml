@@ -1,43 +1,35 @@
 #!/bin/bash
+set -euo pipefail
 
-source $INIT_CWD/.env
+# Load environment variables
+source "$INIT_CWD/.env"
 
-sudo cp $INIT_CWD/certs/ca.crt /usr/local/share/ca-certificates/$CN.crt && sudo update-ca-certificates
-
-### Script installs root.cert.pem to certificate trust store of applications using NSS
-### (e.g. Firefox, Thunderbird, Chromium)
-### Mozilla uses cert8, Chromium and Chrome use cert9
-
-###
-### Requirement: apt install libnss3-tools
-###
-
-
-###
-### CA file to install (CUSTOMIZE!)
-###
+# Check that CN is set
+if [ -z "${CN:-}" ]; then
+    echo "ERROR: CN is not set in .env"
+    exit 1
+fi
 
 certfile="$INIT_CWD/certs/ca.crt"
-certname= echo "$CN Root CA"
+certname="$CN Root CA"
 
+echo "Installing system-wide certificate..."
+sudo cp "$certfile" /usr/local/share/ca-certificates/"$CN.crt"
+sudo update-ca-certificates
 
-###
-### For cert8 (legacy - DBM)
-###
+# Verify system-wide install
+if grep -iq "$CN" /etc/ssl/certs/ca-certificates.crt; then
+    echo "System-wide certificate installed: $CN"
+else
+    echo "System-wide certificate may not be installed properly."
+fi
 
-for certDB in $(find ~/ -name "cert8.db")
-do
-    certdir=$(dirname ${certDB});
-    certutil -A -n "${certname}" -t "TCu,Cu,Tu" -i ${certfile} -d dbm:${certdir}
-done
+echo "Installing user NSS DB certificate (~/.pki/nssdb)..."
+mkdir -p "$HOME/.pki/nssdb"
+certutil -A -n "$certname" -t "TCu,Cu,Tu" -i "$certfile" -d sql:"$HOME/.pki/nssdb"
 
+# Verify user NSS DB
+echo "Listing certificates in user NSS DB:"
+certutil -L -d sql:"$HOME/.pki/nssdb" | grep -i "$CN" || echo "Certificate not found in NSS DB"
 
-###
-### For cert9 (SQL)
-###
-
-for certDB in $(find ~/ -name "cert9.db")
-do
-    certdir=$(dirname ${certDB});
-    certutil -A -n "${certname}" -t "TCu,Cu,Tu" -i ${certfile} -d sql:${certdir}
-done
+echo "Done. Firefox/Chromium will trust $CN Root CA after restart."
