@@ -45,7 +45,7 @@ const backChange = () => {
                    if (!before_i) body.classList.remove(`before-${i}`);
                 }
 
-                body.classList.add("before-end");
+                if (!before_end) body.classList.add("before-end");
 
                 if (reverse) body.classList.remove("reverse");
 
@@ -56,7 +56,7 @@ const backChange = () => {
                    if (!before_i) body.classList.remove(`before-${i}`);
                 }
 
-                body.classList.add("before-start");
+                if (!before_start) body.classList.add("before-start");
 
                 if (reverse) body.classList.remove("reverse");
             } 
