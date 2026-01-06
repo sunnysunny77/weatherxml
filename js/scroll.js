@@ -14,6 +14,8 @@ const backChange = () => {
 
         for (const [i, index] of u.entries()) {
 
+            const before_i = body.classList.contains(`before-${i}`);
+
             if (scrollY > get_position(index) && scrollY < get_position(index) + index.scrollHeight) {
 
                 body.classList.add(`before-${i}`);
@@ -27,7 +29,7 @@ const backChange = () => {
 
                 if (scrollY < prev_scroll) {
 
-                    if (!reverse) body.classList.add("reverse");
+                    if (!reverse && !before_i) body.classList.add("reverse");
 
                 } else if (scrollY > prev_scroll) {
 
