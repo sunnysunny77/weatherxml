@@ -36,27 +36,17 @@ body {
   max-width: 1920px;
   margin: auto;
   position: relative;
-  &.before-0,
-  &.before-1,
-  &.before-2,
-  &.before-3,
-  &.before-4,
-  &.before-5,
-  &.before-6,
-  &.before-start,
-  &.before-end {
-    &::before {
-      content: " ";
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      transition: background-color 1s;
-      will-change: background-color;
-      background-color: $Blue;
-    }
+  &::before {
+    content: " ";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: background-color 1s;
+    will-change: background-color;
+    background-color: $Blue;
   }
   &.before-0::before {
     background-color: $Red;
