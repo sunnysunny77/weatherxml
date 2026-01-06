@@ -15,7 +15,7 @@
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="images/pwa-logo-small.webp" />
   </head>
-  <body data-overlayscrollbars-initialize class="before-start">
+  <body data-overlayscrollbars-initialize>
     <header>
       <h1>        
         <?php
