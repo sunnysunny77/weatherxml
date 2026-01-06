@@ -31,7 +31,7 @@ const backChange = () => {
                 if (before_end) body.classList.remove("before-end");
             } else  if (scrollY > get_position(main) + main.scrollHeight) {
 
-                if (!before_end && before_i) body.classList.add("before-end");
+                if (!before_end) body.classList.add("before-end");
 
                 for (const x of u.keys()) {
 
