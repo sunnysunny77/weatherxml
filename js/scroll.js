@@ -14,49 +14,49 @@ const backChange = () => {
 
         for (const [i, index] of u.entries()) {
 
-            const before_i = body.classList.contains(`before-${i}`);
-
-             if (scrollY > get_position(index) && scrollY < get_position(index) + index.scrollHeight) {                   
-
-                if (before_start) body.classList.remove("before-start");    
-
-                if (before_end) body.classList.remove("before-end"); 
-
-                for (const i in u) {
-
-                   if (!before_i) body.classList.remove(`before-${i}`);
-                }
+            if (scrollY > get_position(index) && scrollY < get_position(index) + index.scrollHeight) {
 
                 body.classList.add(`before-${i}`);
 
+                for (const x of u.keys()) {
+
+                    if(x !== i) {
+                        body.classList.remove(`before-${x}`);
+                    }
+                }
+
                 if (scrollY < prev_scroll) {
 
-                    if (!reverse && !before_i) body.classList.add("reverse");
+                    if (!reverse) body.classList.add("reverse");
 
                 } else if (scrollY > prev_scroll) {
 
-                    if (reverse && !before_i) body.classList.remove("reverse");
+                    if (reverse) body.classList.remove("reverse");
                 }
-                
+
+                if (before_start) body.classList.remove("before-start");
+
+                if (before_end) body.classList.remove("before-end");
+
             } else  if (scrollY > get_position(main) + main.scrollHeight) {
 
-                for (const i in u) {
-
-                   if (!before_i) body.classList.remove(`before-${i}`);
-                }
-
                 if (!before_end) body.classList.add("before-end");
+
+                for (const x of u.keys()) {
+
+                    body.classList.remove(`before-${x}`);
+                }
 
                 if (reverse) body.classList.remove("reverse");
 
             }  else  if (scrollY < prev_scroll && scrollY < get_position(main)) {
 
-                for (const i in u) {
-
-                   if (!before_i) body.classList.remove(`before-${i}`);
-                }
-
                 if (!before_start) body.classList.add("before-start");
+
+                for (const x of u.keys()) {
+
+                    body.classList.remove(`before-${x}`);
+                }
 
                 if (reverse) body.classList.remove("reverse");
             } 
