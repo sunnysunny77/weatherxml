@@ -52,61 +52,38 @@ body {
       right: 0;
       bottom: 0;
       left: 0;
-      animation-fill-mode: forwards;
-      animation-duration: 0.5s;
-      animation-timing-function: ease-in-out;
       z-index: -1;
-    }
-    &.reverse {
-      &.before-0::before {
-        animation-name: zeroRev;
-      }
-      &.before-1::before {
-        animation-name: oneRev;
-      }
-      &.before-2::before {
-        animation-name: twoRev;
-      }
-      &.before-3::before {
-        animation-name: threeRev;
-      }
-      &.before-4::before {
-        animation-name: fourRev;
-      }
-      &.before-5::before {
-        animation-name: fiveRev;
-      }
-      &.before-6::before {
-        animation-name: sixRev;
-      }
+      transition: background-color 1s;
+      will-change: background-color;
+      background-color: $Blue;
     }
   }
   &.before-0::before {
-    animation-name: zero;
+    background-color: $Red;
   }
   &.before-1::before {
-    animation-name: one;
+    background-color: $Orange;
   }
   &.before-2::before {
-    animation-name: two;
+    background-color: $Yellow;
   }
   &.before-3::before {
-    animation-name: three;
+    background-color: $Green;
   }
   &.before-4::before {
-    animation-name: four;
+    background-color: $Blue;
   }
   &.before-5::before {
-    animation-name: five;
+    background-color: $Indigo;
   }
   &.before-6::before {
-    animation-name: six;
+    background-color: $Violet;
   }
   &.before-start::before {
-    animation-name: start;
+    background-color: $Blue;
   }
   &.before-end::before {
-    animation-name: end;
+    background-color: $Blue;
   }
   &.before-0 {
     background-color: $Red;
@@ -133,150 +110,6 @@ body {
     background-color: $Blue;
   }
   &.before-end {
-    background-color: $Blue;
-  }
-}
-
-@keyframes zero {
-  0% {
-    background-color: $Blue;
-  }
-  100% {
-    background-color: $Red;
-  }
-}
-
-@keyframes one {
-  0% {
-    background-color: $Red;
-  }
-  100% {
-    background-color: $Orange;
-  }
-}
-
-@keyframes two {
-  0% {
-    background-color: $Orange;
-  }
-  100% {
-    background-color: $Yellow;
-  }
-}
-
-@keyframes three {
-  0% {
-    background-color: $Yellow;
-  }
-  100% {
-    background-color: $Green;
-  }
-}
-
-@keyframes four {
-  0% {
-    background-color: $Green;
-  }
-  100% {
-    background-color: $Blue;
-  }
-}
-
-@keyframes five {
-  0% {
-    background-color: $Blue;
-  }
-  100% {
-    background-color: $Indigo;
-  }
-}
-
-@keyframes six {
-  0% {
-    background-color: $Indigo;
-  }
-  100% {
-    background-color: $Violet;
-  }
-}
-
-@keyframes zeroRev {
-  0% {
-    background-color: $Orange;
-  }
-  100% {
-    background-color: $Red;
-  }
-}
-
-@keyframes oneRev {
-  0% {
-    background-color: $Yellow;
-  }
-  100% {
-    background-color: $Orange;
-  }
-}
-
-@keyframes twoRev {
-  0% {
-    background-color: $Green;
-  }
-  100% {
-    background-color: $Yellow;
-  }
-}
-
-@keyframes threeRev {
-  0% {
-    background-color: $Blue;
-  }
-  100% {
-    background-color: $Green;
-  }
-}
-
-@keyframes fourRev {
-  0% {
-    background-color: $Indigo;
-  }
-  100% {
-    background-color: $Blue;
-  }
-}
-
-@keyframes fiveRev {
-  0% {
-    background-color: $Violet;
-  }
-  100% {
-    background-color: $Indigo;
-  }
-}
-
-@keyframes sixRev {
-  0% {
-    background-color: $Blue;
-  }
-  100% {
-    background-color: $Violet;
-  }
-}
-
-@keyframes start {
-  0% {
-    background-color: $Red;
-  }
-  100% {
-    background-color: $Blue;
-  }
-}
-
-@keyframes end {
-  0% {
-    background-color: $Violet;
-  }
-  100% {
     background-color: $Blue;
   }
 }
