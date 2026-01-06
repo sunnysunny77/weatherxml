@@ -53,7 +53,7 @@ const backChange = () => {
 
             }  else  if (scrollY < prev_scroll && scrollY < get_position(main)) {
 
-                if (!before_start && before_i) body.classList.add("before-start");
+                if (!before_start) body.classList.add("before-start");
 
                 for (const x of u.keys()) {
 
