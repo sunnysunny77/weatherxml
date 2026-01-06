@@ -16,7 +16,7 @@
 .os-theme-body {
   --os-size: 4px;
   @include min_md {
-      --os-size: 7px;
+    --os-size: 7px;
   }
 }
 
@@ -29,7 +29,6 @@
 .os-theme-body .os-scrollbar-track {
   background: transparent;
 }
-
 
 body {
   background-color: $Blue;
@@ -54,7 +53,7 @@ body {
       bottom: 0;
       left: 0;
       animation-fill-mode: forwards;
-      animation-duration: 1s;
+      animation-duration: 0.5s;
       animation-timing-function: ease-in-out;
       z-index: -1;
     }
@@ -108,6 +107,33 @@ body {
   }
   &.before-end::before {
     animation-name: end;
+  }
+  &.before-0 {
+    background-color: $Red;
+  }
+  &.before-1 {
+    background-color: $Orange;
+  }
+  &.before-2 {
+    background-color: $Yellow;
+  }
+  &.before-3 {
+    background-color: $Green;
+  }
+  &.before-4 {
+    background-color: $Blue;
+  }
+  &.before-5 {
+    background-color: $Indigo;
+  }
+  &.before-6 {
+    background-color: $Violet;
+  }
+  &.before-start {
+    background-color: $Blue;
+  }
+  &.before-end {
+    background-color: $Blue;
   }
 }
 
@@ -194,7 +220,7 @@ body {
 
 @keyframes twoRev {
   0% {
-    background-color: $Green
+    background-color: $Green;
   }
   100% {
     background-color: $Yellow;
@@ -206,7 +232,7 @@ body {
     background-color: $Blue;
   }
   100% {
-    background-color: $Green
+    background-color: $Green;
   }
 }
 
@@ -281,7 +307,8 @@ header {
 }
 
 .u {
-  padding: 5% 2.25% 0 2.25%;
+  margin: 5% 0 0 0;
+  padding: 0 2.25% 0 2.25%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -291,7 +318,8 @@ header {
     justify-content: initial;
     flex-wrap: initial;
     align-items: initial;
-    padding: 7.5% 17px;
+    padding: 0 17px;
+    margin: 7.5% 0 0 0;
   }
   span {
     display: block;
@@ -316,7 +344,7 @@ header {
   img {
     width: 34%;
     height: 100%;
-    margin: 3%  0 0 0;
+    margin: 3% 0 0 0;
     max-width: 134px;
     min-width: 60px;
     filter: invert(63%);

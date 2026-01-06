@@ -39,7 +39,6 @@ const backChange = () => {
                 if (before_start) body.classList.remove("before-start");
 
                 if (before_end) body.classList.remove("before-end");
-
             } else  if (scrollY > get_position(main) + main.scrollHeight) {
 
                 if (!before_end && before_i) body.classList.add("before-end");
@@ -50,7 +49,6 @@ const backChange = () => {
                 }
 
                 if (reverse) body.classList.remove("reverse");
-
             }  else  if (scrollY < prev_scroll && scrollY < get_position(main)) {
 
                 if (!before_start && before_i) body.classList.add("before-start");
